@@ -12,7 +12,6 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getJuegos(): Observable<any[]> {
-    debugger;
     return this.http.get<any[]>(`${this.apiUrl}/juegos`);
   }
 }
