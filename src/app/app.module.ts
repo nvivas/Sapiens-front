@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListaJuegosComponent } from './component/lista-juegos/lista-juegos.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -13,7 +14,7 @@ import { ListaJuegosComponent } from './component/lista-juegos/lista-juegos.comp
     AppComponent,
     ListaJuegosComponent,
   ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, TranslateModule.forRoot()],
   providers: [],
   bootstrap: [AppComponent],
 })
