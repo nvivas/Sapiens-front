@@ -1,6 +1,8 @@
-<div *ngFor="let juego of juegos" class="game">
-  <h3>{{ juego.nombre }}</h3>
-  <p>Precio: {{ juego.precio }}</p>
-  <p *ngIf="juego.stock > 0">Disponible</p>
-  <p *ngIf="juego.stock === 0">No disponible</p>
+<div class="container">
+  <div *ngFor="let juego of juegos" class="juego">
+    <h3>{{ juego.nombre }}</h3>
+    <p>Precio: {{ juego.precio }}</p>
+    <p *ngIf="juego.stock > 0">Disponible</p>
+    <p *ngIf="juego.stock === 0">No disponible</p>
+  </div>
 </div>

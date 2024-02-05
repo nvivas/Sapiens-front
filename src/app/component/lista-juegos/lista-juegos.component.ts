@@ -5,7 +5,7 @@ import { ApiService } from '../../services/api.service';
 @Component({
   selector: 'app-lista-juegos',
   templateUrl: './lista-juegos.component.html',
-  styleUrls: ['./lista-juegos.component.scss']
+  styleUrls: ['./lista-juegos.component.css']
 })
 export class ListaJuegosComponent implements OnInit {
   juegos: Juego[] = [];
@@ -17,7 +17,6 @@ export class ListaJuegosComponent implements OnInit {
   }
 
   getGames(): void {
-    this.juego.getJuegos()
-      .subscribe(juego => this.juegos = juego);
+    this.juego.getJuegos().subscribe(juego => this.juegos = juego);
   }
 }

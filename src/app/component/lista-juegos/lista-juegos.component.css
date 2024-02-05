@@ -40,19 +40,25 @@ body {
   
   /* Estilos para la lista de juegos */
   
-  .games-list {
+  .juego-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
   
-  .game {
+  .juego {
     border: 1px solid #ccc;
     padding: 20px;
     text-align: center;
   }
+
+  .container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
   
-  .game h3 {
+  .juego h3 {
     margin-top: 0;
   }
   
@@ -94,4 +100,3 @@ body {
     bottom: 0;
     width: 100%;
   }
-  
