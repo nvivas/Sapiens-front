@@ -5,5 +5,6 @@ export interface Juego {
     precio: number;
     categoria: string;
     stock: number;
+    imagen_ruta: string;
   }
   

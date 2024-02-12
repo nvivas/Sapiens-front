@@ -1,9 +1,82 @@
-<h1>{{ 'prueba' | translate }}</h1>
+<div class="fondoPagina"></div>
 <div class="container">
+  <!-- Recorrer todos los juegos -->
   <div *ngFor="let juego of juegos" class="juego">
     <h3>{{ juego.nombre }}</h3>
+    <img
+      [src]="getImagePath(juego.imagen_ruta)"
+      alt="{{ juego.imagen_ruta }}"
+      class="imagenJuego"
+    />
     <p>Precio: {{ juego.precio }}</p>
-    <p *ngIf="juego.stock > 0">Disponible</p>
-    <p *ngIf="juego.stock === 0">No disponible</p>
+    <p *ngIf="juego.stock > 0" class="disponible">
+      Disponible. {{ juego.stock }} en stock
+    </p>
+    <p *ngIf="juego.stock == 0" class="no_disponible">Agotado</p>
+  </div>
+  <div *ngFor="let juego of juegos" class="juego">
+    <h3>{{ juego.nombre }}</h3>
+    <img
+      [src]="getImagePath(juego.imagen_ruta)"
+      alt="{{ juego.imagen_ruta }}"
+      class="imagenJuego"
+    />
+    <p>Precio: {{ juego.precio }}</p>
+    <p *ngIf="juego.stock > 0" class="disponible">
+      Disponible. {{ juego.stock }} en stock
+    </p>
+    <p *ngIf="juego.stock == 0" class="no_disponible">Agotado</p>
+  </div>
+  <div *ngFor="let juego of juegos" class="juego">
+    <h3>{{ juego.nombre }}</h3>
+    <img
+      [src]="getImagePath(juego.imagen_ruta)"
+      alt="{{ juego.imagen_ruta }}"
+      class="imagenJuego"
+    />
+    <p>Precio: {{ juego.precio }}</p>
+    <p *ngIf="juego.stock > 0" class="disponible">
+      Disponible. {{ juego.stock }} en stock
+    </p>
+    <p *ngIf="juego.stock == 0" class="no_disponible">Agotado</p>
+  </div>
+  <div *ngFor="let juego of juegos" class="juego">
+    <h3>{{ juego.nombre }}</h3>
+    <img
+      [src]="getImagePath(juego.imagen_ruta)"
+      alt="{{ juego.imagen_ruta }}"
+      class="imagenJuego"
+    />
+    <p>Precio: {{ juego.precio }}</p>
+    <p *ngIf="juego.stock > 0" class="disponible">
+      Disponible. {{ juego.stock }} en stock
+    </p>
+    <p *ngIf="juego.stock == 0" class="no_disponible">Agotado</p>
+  </div>
+  <div *ngFor="let juego of juegos" class="juego">
+    <h3>{{ juego.nombre }}</h3>
+    <img
+      [src]="getImagePath(juego.imagen_ruta)"
+      alt="{{ juego.imagen_ruta }}"
+      class="imagenJuego"
+    />
+    <p>Precio: {{ juego.precio }}</p>
+    <p *ngIf="juego.stock > 0" class="disponible">
+      Disponible. {{ juego.stock }} en stock
+    </p>
+    <p *ngIf="juego.stock == 0" class="no_disponible">Agotado</p>
+  </div>
+  <div *ngFor="let juego of juegos" class="juego">
+    <h3>{{ juego.nombre }}</h3>
+    <img
+      [src]="getImagePath(juego.imagen_ruta)"
+      alt="{{ juego.imagen_ruta }}"
+      class="imagenJuego"
+    />
+    <p>Precio: {{ juego.precio }}</p>
+    <p *ngIf="juego.stock > 0" class="disponible">
+      Disponible. {{ juego.stock }} en stock
+    </p>
+    <p *ngIf="juego.stock == 0" class="no_disponible">Agotado</p>
   </div>
 </div>

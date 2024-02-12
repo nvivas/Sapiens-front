@@ -1,0 +1,16 @@
+{
+  "titulo": {
+    "principal": "JUEGOS SAPIENS",
+    "antiguo": "Antiguo",
+    "moderno": "Moderno",
+    "clasicos": "Clásicos",
+    "": ""
+  },
+
+  "historia": {
+    "antigua": "Historia Antigua",
+    "moderna": "Historia Moderna",
+    "txtAntigua": "Según la historia, los juegos de mesa surgieron en la antigua Mesopotamia alrededor de los 5.000 años antes de Cristo. Se les llamó 'juegos de pasaje del alma', ya que fueron enterrados junto con los muertos para acompañarlos en lo que creían que era la otra vida. juegos de mesa. Según la tradición mesopotámica, estos juegos eran considerados objetos deextremo valor sentimental para las personas, ya que constituían una oportunidad de entretenimiento e interacción entre amigos o miembros de una misma familia. Cuando las rutas comerciales comenzaron a expandirse, los juegos también comenzaron a circular. Así, surgieron nuevas opciones para adaptarse a nuevos pueblos y nuevas culturas. El ajedrez, por ejemplo, tiene como posible precursor un juego indio llamado 'Chaturanga'. El juego de damas, a su vez, puede tener su origen en la cultura Inca. Y también se encontró como parte de la tradición de algunas tribus indígenas brasileñas, llamadas “Jogo da Onça”. Con el paso de los años, se fueron creando muchas variaciones de juegos de mesa, volviéndose cada vez más divertidos y llenos de detalles.",
+    "txtModerna": "La mayoría de los juegos que conocemos hoy provienen del período posterior a la Revolución Industrial, a partir de entonces, con posibilidad de producción a escala y mayor circulación. Estos divertidos recursos se han extendido ampliamente por todo el mundo, convirtiéndose en una sensación infantil durante muchas generaciones, pero antes. que también hicieron historia en el escenario de las grandes guerras que asolaron a la humanidad. Se dice que los soldados que lucharon a lo largo de las dos guerras mundiales fueron colocados a jugar juegos de mesa con otros compañeros, por lo que se les animaba a pensar y razonar con lógica. La idea era aprender a crear estrategias defensivas y de ataque, además de disfrutar un poco de distracción en medio del entorno hostil. En el período conocido como Guerra Fría, la mayoría de los juegos de mesa tradicionales de la actualidad, como el juegos de las Damas, varios juegos de cartas o el dominó, se fueron popularizando. Y alcanzaron un alto índice de fabricación, principalmente en Estados Unidos y Europa que impregnó el mundo lúdico y divertido de los niños que no conocían los atractivos del ciberespacio."
+  }
+}

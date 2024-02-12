@@ -24,4 +24,8 @@ export class ListaJuegosComponent implements OnInit {
   cambiarIdioma(idioma: string) {
     this.translate.use(idioma); // Cambiar el idioma de la aplicación
   }
+
+  getImagePath(imageName: string): string {
+    return './../../../assets/img/' + imageName;
+  }
 }

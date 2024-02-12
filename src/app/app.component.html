@@ -1,10 +1,15 @@
-<div>
-  <h1>JuegoSapiens</h1>
-  <nav>
-    <ul>
-      <app-lista-juegos></app-lista-juegos>
-    </ul>
-  </nav>
+<div class="contenedor">
+  <div class="contenedor-logo">
+    <img
+      class="logo"
+      src="../assets/img/JuegosSapiensTitulo.jpg"
+      alt="Logo de la aplicación"
+    />
+    <h1 class="tituloPrincipal">
+      {{ "titulo.principal" | translate }}
+    </h1>
+  </div>
+  <app-navbar></app-navbar>
 </div>
 
 <router-outlet></router-outlet>
