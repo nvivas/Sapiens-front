@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { HistoriaJuegosComponent } from './component/historia-juegos/historia-juegos.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -22,6 +23,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HistoriaJuegosComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     HttpClientModule,
     TranslateModule.forRoot({

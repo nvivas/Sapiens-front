@@ -1,3 +1,8 @@
+<input type="text" [(ngModel)]="filtro" placeholder="Filtrar por nombre">
+<ul>
+  <li *ngFor="let dato of datos | filter: filtro">{{ dato.nombre }}</li>
+</ul>
+
 <div class="fondoPagina"></div>
 <div class="container">
   <!-- Recorrer todos los juegos -->
