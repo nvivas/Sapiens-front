@@ -1,87 +1,25 @@
-<input type="text" [(ngModel)]="filtro" placeholder="Filtrar por nombre">
-<ul>
-  <li *ngFor="let dato of datos | filter: filtro">{{ dato.nombre }}</li>
-</ul>
-
 <div class="fondoPagina"></div>
-<div class="container">
+<!-- <input type="text" [(ngModel)]="filtro" (input)="aplicarFiltro()" placeholder="Buscar juegos..."> -->
+<ul>
+  <li *ngFor="let juego of juegosFiltrados">
+    {{ juego.nombre }} - {{ juego.plataforma }} - {{ juego.genero }}
+  </li>
+</ul>
+<div class="container" onclick="verJuego()">
   <!-- Recorrer todos los juegos -->
   <div *ngFor="let juego of juegos" class="juego">
-    <h3>{{ juego.nombre }}</h3>
-    <img
-      [src]="getImagePath(juego.imagen_ruta)"
-      alt="{{ juego.imagen_ruta }}"
-      class="imagenJuego"
-    />
-    <p>Precio: {{ juego.precio }}</p>
-    <p *ngIf="juego.stock > 0" class="disponible">
-      Disponible. {{ juego.stock }} en stock
-    </p>
-    <p *ngIf="juego.stock == 0" class="no_disponible">Agotado</p>
-  </div>
-  <div *ngFor="let juego of juegos" class="juego">
-    <h3>{{ juego.nombre }}</h3>
-    <img
-      [src]="getImagePath(juego.imagen_ruta)"
-      alt="{{ juego.imagen_ruta }}"
-      class="imagenJuego"
-    />
-    <p>Precio: {{ juego.precio }}</p>
-    <p *ngIf="juego.stock > 0" class="disponible">
-      Disponible. {{ juego.stock }} en stock
-    </p>
-    <p *ngIf="juego.stock == 0" class="no_disponible">Agotado</p>
-  </div>
-  <div *ngFor="let juego of juegos" class="juego">
-    <h3>{{ juego.nombre }}</h3>
-    <img
-      [src]="getImagePath(juego.imagen_ruta)"
-      alt="{{ juego.imagen_ruta }}"
-      class="imagenJuego"
-    />
-    <p>Precio: {{ juego.precio }}</p>
-    <p *ngIf="juego.stock > 0" class="disponible">
-      Disponible. {{ juego.stock }} en stock
-    </p>
-    <p *ngIf="juego.stock == 0" class="no_disponible">Agotado</p>
-  </div>
-  <div *ngFor="let juego of juegos" class="juego">
-    <h3>{{ juego.nombre }}</h3>
-    <img
-      [src]="getImagePath(juego.imagen_ruta)"
-      alt="{{ juego.imagen_ruta }}"
-      class="imagenJuego"
-    />
-    <p>Precio: {{ juego.precio }}</p>
-    <p *ngIf="juego.stock > 0" class="disponible">
-      Disponible. {{ juego.stock }} en stock
-    </p>
-    <p *ngIf="juego.stock == 0" class="no_disponible">Agotado</p>
-  </div>
-  <div *ngFor="let juego of juegos" class="juego">
-    <h3>{{ juego.nombre }}</h3>
-    <img
-      [src]="getImagePath(juego.imagen_ruta)"
-      alt="{{ juego.imagen_ruta }}"
-      class="imagenJuego"
-    />
-    <p>Precio: {{ juego.precio }}</p>
-    <p *ngIf="juego.stock > 0" class="disponible">
-      Disponible. {{ juego.stock }} en stock
-    </p>
-    <p *ngIf="juego.stock == 0" class="no_disponible">Agotado</p>
-  </div>
-  <div *ngFor="let juego of juegos" class="juego">
-    <h3>{{ juego.nombre }}</h3>
-    <img
-      [src]="getImagePath(juego.imagen_ruta)"
-      alt="{{ juego.imagen_ruta }}"
-      class="imagenJuego"
-    />
-    <p>Precio: {{ juego.precio }}</p>
-    <p *ngIf="juego.stock > 0" class="disponible">
-      Disponible. {{ juego.stock }} en stock
-    </p>
-    <p *ngIf="juego.stock == 0" class="no_disponible">Agotado</p>
+    <a [routerLink]="['/detalle-juegos', juego.id]">
+      <h3>{{ juego.nombre }}</h3>
+      <img
+        [src]="getImagePath(juego.imagen_ruta)"
+        alt="{{ juego.imagen_ruta }}"
+        class="imagenJuego"
+      />
+      <p>Precio: {{ juego.precio }}</p>
+      <p *ngIf="juego.stock > 0" class="disponible">
+        Disponible. {{ juego.stock }} en stock
+      </p>
+      <p *ngIf="juego.stock == 0" class="no_disponible">Agotado</p>
+    </a>
   </div>
 </div>
