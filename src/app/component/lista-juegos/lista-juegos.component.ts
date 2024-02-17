@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Juego } from '../../models/juego.model';
 import { ApiService } from '../../services/api.service';
 import { TranslateService } from '@ngx-translate/core';
-import { JuegoService } from 'src/app/juego.service';
 import { FormsModule } from '@angular/forms';
+import { JuegoService } from 'src/app/services/juego.service';
 
 @Component({
   selector: 'app-lista-juegos',

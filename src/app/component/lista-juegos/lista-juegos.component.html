@@ -1,5 +1,6 @@
 <div class="fondoPagina"></div>
-<!-- <input type="text" [(ngModel)]="filtro" (input)="aplicarFiltro()" placeholder="Buscar juegos..."> -->
+<input type="text" (input)="aplicarFiltro()" placeholder="Buscar juegos...">
+<button ></button>
 <ul>
   <li *ngFor="let juego of juegosFiltrados">
     {{ juego.nombre }} - {{ juego.plataforma }} - {{ juego.genero }}
