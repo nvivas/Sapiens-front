@@ -1,11 +1,23 @@
-<div class="fondoPagina"></div>
-<input type="text" (input)="aplicarFiltro()" placeholder="Buscar juegos...">
-<button ></button>
-<ul>
-  <li *ngFor="let juego of juegosFiltrados">
-    {{ juego.nombre }} - {{ juego.plataforma }} - {{ juego.genero }}
-  </li>
-</ul>
+<!--
+<h1>Example of Angular Search Filter</h1>
+<div class="container">
+    <div class="search-name">
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="on" placeholder=" SEARCH  ">
+    </div>
+    <ul *ngFor="let name of juegos | filter:searchText">
+        <li>
+            <span>{{name.country}}</span>
+        </li>
+    </ul>
+</div> -->
+
+
+
+
+
+
+
+
 <div class="container" onclick="verJuego()">
   <!-- Recorrer todos los juegos -->
   <div *ngFor="let juego of juegos" class="juego">

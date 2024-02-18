@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Juego } from '../../models/juego.model';
 import { ApiService } from '../../services/api.service';
 import { TranslateService } from '@ngx-translate/core';
-import { FormsModule } from '@angular/forms';
 import { JuegoService } from 'src/app/services/juego.service';
 
 @Component({
@@ -47,7 +46,7 @@ export class ListaJuegosComponent implements OnInit {
     this.juegosService.obtenerJuegos().subscribe(
       (response: any) => {
         this.juegos = response;
-        this.aplicarFiltro();
+        this.verJuego();
       },
       (error: any) => {
         console.error('Error al obtener los juegos', error);
@@ -55,11 +54,9 @@ export class ListaJuegosComponent implements OnInit {
     );
   }
 
-  aplicarFiltro() {
+  verJuego() {
     this.juegosFiltrados = this.juegos.filter(juego =>
       juego.nombre.toLowerCase().includes(this.filtro.toLowerCase())
     );
   }
-
-
 }
