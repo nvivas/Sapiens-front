@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-// import { JuegoService } from 'src/app/juego.service';
 import { Juego } from 'src/app/models/juego.model';
+import { JuegoService } from 'src/app/services/juego.service';
 
 @Component({
   selector: 'app-detalle-juegos',
@@ -10,24 +10,32 @@ import { Juego } from 'src/app/models/juego.model';
 })
 export class DetalleJuegosComponent implements OnInit {
   juego: Juego | undefined;
-  juegoId: number = 0;
+  juegoId: number | undefined;
 
   constructor(
     private route: ActivatedRoute,
-    // private juegoService: JuegoService
+    private juegoService: JuegoService
   ) {}
 
-  ngOnInit(): void {
-    this.route.paramMap.subscribe((params) => {
-      const idParam = params.get('id');
-      if (idParam !== null && idParam !== undefined && !isNaN(+idParam)) {
-        this.juegoId = +idParam;
-        // this.juegoService.getJuegoById(this.juegoId);
-      } else {
-        console.error(
-          'Error: this.juegoId no está definido o su valor no es numérico'
-        );
-      }
+  ngOnInit() {
+    const idParam = this.route.snapshot.paramMap.get('id');
+    console.warn('IdParam ', idParam);
+    if (idParam !== null && idParam !== undefined) {
+      this.juegoId = +idParam;
+      this.obtenerJuego(this.juegoId);
+    } else {
+      console.error('Error: el parámetro id es null o undefined');
+    }
+
+    // this.route.params.subscribe((params) => {
+    //   const juegoId = +params['id'];
+    //   this.obtenerJuego(juegoId);
+    // });
+  }
+
+  obtenerJuego(juegoId: number) {
+    this.juegoService.getJuegoById(juegoId).subscribe((juego) => {
+      this.juego = juego;
     });
   }
 }

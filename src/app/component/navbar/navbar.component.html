@@ -1,34 +1,10 @@
 <header>
   <nav class="navegacion">
-    <li class="nav-item">
-      <a routerLink="/inicio" routerLinkActive="active"
-        ><i class="fas fa-home"></i>Inicio</a
-      >
-    </li>
-    <li class="nav-item">
-      <a routerLink="/juegos" routerLinkActive="active"
-        ><i class="fas fa-home"></i>Juegos</a
-      >
-    </li>
-    <li class="nav-item">
-      <a routerLink="/historia-juegos" routerLinkActive="active"
-        ><i class="fas fa-info"></i>Historia de los juegos</a
-      >
-    </li>
-    <li class="nav-item">
-      <a routerLink="/accesorios" routerLinkActive="active"
-        ><i class="fas fa-cogs"></i> Accesorios</a
-      >
-    </li>
-    <li class="nav-item">
-      <a routerLink="/rol" routerLinkActive="active"
-        ><i class="fas fa-address-book"></i>Juego de Rol</a
-      >
-    </li>
-    <li class="nav-item">
-      <a routerLink="/contacto" routerLinkActive="active"
-        ><i class="fas fa-address-book"></i>Contacto</a
-      >
-    </li>
+    <li class="nav-item"><a routerLink="/inicio" routerLinkActive="active"><i class="fas fa-home"></i>{{ "navegacion.inicio" | translate }}</a></li>
+    <li class="nav-item"><a routerLink="/juegos" routerLinkActive="active"><i class="fas fa-home"></i>{{ "navegacion.juegos" | translate }}</a></li>
+    <li class="nav-item"><a routerLink="/historia-juegos" routerLinkActive="active"><i class="fas fa-info"></i>{{ "navegacion.historia" | translate }}</a></li>
+    <li class="nav-item"><a routerLink="/accesorios" routerLinkActive="active"><i class="fas fa-cogs"></i> {{ "navegacion.accesorios" | translate }}</a></li>
+    <li class="nav-item"><a routerLink="/rol" routerLinkActive="active"><i class="fas fa-address-book"></i>{{ "navegacion.rol" | translate }}</a></li>
+    <li class="nav-item"><a routerLink="/contacto" routerLinkActive="active"><i class="fas fa-address-book"></i>{{ "navegacion.contacto" | translate }}</a></li>
   </nav>
 </header>

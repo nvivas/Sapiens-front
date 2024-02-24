@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Typia+Nesia+Std&display=swap');
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
 
 .slide {
   display: flex;
@@ -34,4 +36,73 @@
   align-items: center;
   justify-content: center;
   font-family: 'Typia Nesia Std', cursive;
+}
+
+.botonArriba {
+  width: 50px;
+  height: 50px;
+}
+.centrar {
+  display: flex;
+  justify-content: center;
+}
+
+.navegacion {
+  border: black solid 3px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #343a40;
+  transition: all 0.3s ease-in-out;
+  width: 50%;
+}
+
+.navegacion a {
+  display: block;
+  padding: 10px;
+  color: #cfd8dc;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navegacion .nav-item {
+  padding: 5px 0;
+}
+
+.navegacion .nav-item.active a {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navegacion .nav-item.active a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navegacion {
+  margin: 20px;
+}
+
+.navegacion li {
+  list-style: none;
+}
+
+.navegacion a {
+  display: block;
+  padding: 10px;
+  color: #cfd8dc;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navegacion a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navegacion a i {
+  margin-right: 10px;
+}
+
+.navegacion .nav-item {
+  padding: 5px 0;
 }

@@ -1,24 +1,4 @@
-<!--
-<h1>Example of Angular Search Filter</h1>
 <div class="container">
-    <div class="search-name">
-        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="on" placeholder=" SEARCH  ">
-    </div>
-    <ul *ngFor="let name of juegos | filter:searchText">
-        <li>
-            <span>{{name.country}}</span>
-        </li>
-    </ul>
-</div> -->
-
-
-
-
-
-
-
-
-<div class="container" onclick="verJuego()">
   <!-- Recorrer todos los juegos -->
   <div *ngFor="let juego of juegos" class="juego">
     <a [routerLink]="['/detalle-juegos', juego.id]">
@@ -30,9 +10,12 @@
       />
       <p>Precio: {{ juego.precio }}</p>
       <p *ngIf="juego.stock > 0" class="disponible">
-        Disponible. {{ juego.stock }} en stock
+        {{ "lista.disponible" | translate }} {{ juego.stock }} {{ "lista.en-stock" | translate }}
       </p>
-      <p *ngIf="juego.stock == 0" class="no_disponible">Agotado</p>
+      <p *ngIf="juego.stock == 0" class="no_disponible">{{ "lista.agotado" | translate }}</p>
+      <button (click)="addToCart(juego.id)">Agregar al carrito</button>
     </a>
   </div>
 </div>
+
+

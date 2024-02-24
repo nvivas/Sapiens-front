@@ -12,6 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { DetalleJuegosComponent } from './component/detalle-juegos/detalle-juegos.component';
 import { InicioComponent } from './component/inicio/inicio.component';
+import { FilterPipe } from './filter.pipe';
+import { PurchaseService } from './services/purchase.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -25,6 +27,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HistoriaJuegosComponent,
     DetalleJuegosComponent,
     InicioComponent,
+    FilterPipe,
   ],
   imports: [
     FormsModule,
@@ -40,7 +43,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     RouterModule.forRoot([]),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PurchaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

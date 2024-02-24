@@ -1,9 +1,5 @@
+<h2>Detalle del Juego</h2>
 <div *ngIf="juego">
-  <h1>{{ juego.nombre }}</h1>
-  <p>{{ juego.descripcion }}</p>
-  <p>Precio: {{ juego.precio | currency }}</p>
-  <!-- mostrar más detalles del juego aquí -->
-</div>
-<div *ngIf="!juego">
-  <p>Cargando juego... <p>
+  <h3>{{ juego.nombre }}</h3>
+  <p><strong>Año:</strong> {{ juego.descripcion }}</p>
 </div>

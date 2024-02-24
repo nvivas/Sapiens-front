@@ -3,6 +3,8 @@ import { Juego } from '../../models/juego.model';
 import { ApiService } from '../../services/api.service';
 import { TranslateService } from '@ngx-translate/core';
 import { JuegoService } from 'src/app/services/juego.service';
+import { Router } from '@angular/router';
+import { PurchaseService } from '../../services/purchase.service';
 
 @Component({
   selector: 'app-lista-juegos',
@@ -15,12 +17,15 @@ export class ListaJuegosComponent implements OnInit {
   juegos: Juego[] = [];
   juegosFiltrados: any[] = [];
   filtro: string = '';
+  juegoSeleccionado: any;
+  filterPost = '';
+  categorias: string[] = ['categoria1', 'categoria2', 'todos'];
 
-  constructor(private juego: ApiService ,private translate: TranslateService, private juegosService: JuegoService) {}
+  constructor(private juego: ApiService ,private translate: TranslateService, private juegosService: JuegoService,
+                    private router: Router, private purchaseService: PurchaseService) {}
 
   ngOnInit(): void {
     this.getGames();
-    this.obtenerJuegos();
   }
 
   getGames(): void {
@@ -35,28 +40,20 @@ export class ListaJuegosComponent implements OnInit {
     return './../../../assets/img/' + imageName;
   }
 
-  transform(items: any[], filtro: string): any[] {
-    if (!items || !filtro) {
-      return items;
-    }
-    return items.filter(item => item.nombre.toLowerCase().includes(filtro.toLowerCase()));
+  filtrarProductos(event: any): void {
+    const nombre = event.target.value;
+    this.juegosService.filtrarJuegos(nombre);
   }
 
-  obtenerJuegos() {
-    this.juegosService.obtenerJuegos().subscribe(
-      (response: any) => {
-        this.juegos = response;
-        this.verJuego();
+  addToCart(juegoID: number) {
+    this.purchaseService.addToCart(juegoID).subscribe(
+      () => {
+        console.log('Juego agregado al carrito');
+        // Aquí puedes manejar la actualización del carrito en el frontend si es necesario
       },
-      (error: any) => {
-        console.error('Error al obtener los juegos', error);
+      (error) => {
+        console.error('Error al agregar juego al carrito:', error);
       }
-    );
-  }
-
-  verJuego() {
-    this.juegosFiltrados = this.juegos.filter(juego =>
-      juego.nombre.toLowerCase().includes(this.filtro.toLowerCase())
     );
   }
 }

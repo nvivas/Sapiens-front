@@ -11,7 +11,6 @@ const routes: Routes = [
   { path: 'juegos', component: ListaJuegosComponent },
   { path: 'historia-juegos', component: HistoriaJuegosComponent },
   { path: 'detalle-juegos/:id', component: DetalleJuegosComponent },
-
 ];
 
 @NgModule({
