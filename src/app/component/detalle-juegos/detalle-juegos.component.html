@@ -1,5 +1,12 @@
-<h2>Detalle del Juego</h2>
-<div *ngIf="juego">
-  <h3>{{ juego.nombre }}</h3>
-  <p><strong>Año:</strong> {{ juego.descripcion }}</p>
+<div class="contenedor-principal">
+  <div class="contenedor">
+    <img [src]="getImagePath(juego.imagen_ruta)" alt="Juego de mesa" class="imagen" />
+    <div class="product-info">
+      <h2>{{juego.nombre}}</h2>
+      <p class="product-price">{{ juego.precio }} €</p>
+      <button (click)="addToCart(juego.id)">Comprar</button>
+    </div>
+  </div>
+  <p class="texto">{{ juego.descripcion }}</p>
 </div>
+

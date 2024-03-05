@@ -1,19 +1,15 @@
+<input type="text" [value]="searchTerm" (input)="searchGames($event)" placeholder="Buscar juegos...">
+<button (click)="searchGames($event)">Buscar</button>
+
 <div class="container">
   <!-- Recorrer todos los juegos -->
   <div *ngFor="let juego of juegos" class="juego">
     <a [routerLink]="['/detalle-juegos', juego.id]">
       <h3>{{ juego.nombre }}</h3>
-      <img
-        [src]="getImagePath(juego.imagen_ruta)"
-        alt="{{ juego.imagen_ruta }}"
-        class="imagenJuego"
-      />
-      <p>Precio: {{ juego.precio }}</p>
-      <p *ngIf="juego.stock > 0" class="disponible">
-        {{ "lista.disponible" | translate }} {{ juego.stock }} {{ "lista.en-stock" | translate }}
-      </p>
-      <p *ngIf="juego.stock == 0" class="no_disponible">{{ "lista.agotado" | translate }}</p>
-      <button (click)="addToCart(juego.id)">Agregar al carrito</button>
+      <img [src]="getImagePath(juego.imagen_ruta)" alt="{{ juego.imagen_ruta }}" class="imagenJuego" />
+      <p class="precio">Precio: {{ juego.precio }}</p>
+      <p *ngIf="juego.stock > 0" class="disponible stock">{{ "lista.disponible" | translate }} </p>
+      <p *ngIf="juego.stock == 0" class="no_disponible stock">{{ "lista.agotado" | translate }}</p>
     </a>
   </div>
 </div>

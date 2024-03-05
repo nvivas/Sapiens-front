@@ -18,6 +18,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 340px;
+  height: 340px;
+}
+
+.stock, .precio {
+  display: flex;
+  justify-content: center;
 }
 
 .juego h3 {
@@ -25,7 +32,7 @@ body {
 }
 
 .imagenJuego {
-  width: 100px;
+  width: 200px;
 }
 
 .disponible {

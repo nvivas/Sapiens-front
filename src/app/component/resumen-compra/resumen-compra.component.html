@@ -1,0 +1,25 @@
+<h1>Resumen compra</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Precio</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let juego of juegos">
+    <tr >
+      <td>{{ juego.nombre }}</td>
+      <td>{{ juego.precio }}</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Total:</td>
+      <td>{{ total }}</td>
+    </tr>
+  </tfoot>
+</table>
+
+<button (click)="borrarCarrito()">Borrar carrito</button>
+

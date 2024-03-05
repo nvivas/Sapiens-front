@@ -9,11 +9,13 @@ import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { HistoriaJuegosComponent } from './component/historia-juegos/historia-juegos.component';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DetalleJuegosComponent } from './component/detalle-juegos/detalle-juegos.component';
 import { InicioComponent } from './component/inicio/inicio.component';
 import { FilterPipe } from './filter.pipe';
 import { PurchaseService } from './services/purchase.service';
+import { ResumenCompraComponent } from './component/resumen-compra/resumen-compra.component';
+import { FormJuegosComponent } from './component/form-juegos/form-juegos.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -28,6 +30,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     DetalleJuegosComponent,
     InicioComponent,
     FilterPipe,
+    ResumenCompraComponent,
+    FormJuegosComponent
   ],
   imports: [
     FormsModule,
@@ -41,7 +45,8 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     }),
     RouterModule.forRoot([]),
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [PurchaseService],
   bootstrap: [AppComponent]

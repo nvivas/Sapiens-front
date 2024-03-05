@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { PurchaseService } from 'src/app/services/purchase.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,10 +9,36 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class NavbarComponent implements OnInit {
+  itemCount: number = 0;
+  itemCountSubscription: Subscription | undefined;
 
-  constructor() { }
+  constructor(private purchaseService: PurchaseService) {}
+  ngOnInit() {
+    this.updateItemCount();
+    this.itemCountSubscription = this.purchaseService.getItemCountObservable().subscribe(count => {
+      this.itemCount = count;
+    });
 
-  ngOnInit(): void {
+    this.itemCount = this.purchaseService.getItemCount();
+    this.itemCountSubscription = this.purchaseService.getItemCountObservable().subscribe(count => {
+      this.itemCount = count;
+    });
+
+    // Suscribirse al evento de borrado del carrito
+    this.purchaseService.getClearCartObservable().subscribe(() => {
+      this.itemCount = 0; // Reiniciar el contador
+    });
   }
 
+  ngOnDestroy() {
+    if (this.itemCountSubscription) {
+      this.itemCountSubscription.unsubscribe();
+    }
+  }
+
+  updateItemCount() {
+    this.itemCount = this.purchaseService.getItemCount();
+  }
 }
+
+

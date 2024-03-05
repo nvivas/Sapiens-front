@@ -1,19 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Typia+Nesia+Std&display=swap');
-@import "~@fortawesome/fontawesome-free/css/all.css";
-
-
 .slide {
   display: flex;
   flex-direction: row;
   align-items: center;
   border-bottom: 4px solid black;
   margin-bottom: 20px;
+  width: 75%;
+  margin: 0 auto;
 }
 
 .texto {
   flex: 1;
   padding: 20px;
-  font-family: 'Typia Nesia Std', cursive;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +32,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Typia Nesia Std', cursive;
 }
 
 .botonArriba {

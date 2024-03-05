@@ -4,12 +4,16 @@ import { ListaJuegosComponent } from './component/lista-juegos/lista-juegos.comp
 import { HistoriaJuegosComponent } from './component/historia-juegos/historia-juegos.component';
 import { DetalleJuegosComponent } from './component/detalle-juegos/detalle-juegos.component';
 import { InicioComponent } from './component/inicio/inicio.component';
+import { ResumenCompraComponent } from './component/resumen-compra/resumen-compra.component';
+import { FormJuegosComponent } from './component/form-juegos/form-juegos.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full'},
   { path: 'inicio', component: InicioComponent },
   { path: 'juegos', component: ListaJuegosComponent },
   { path: 'historia-juegos', component: HistoriaJuegosComponent },
+  { path: 'resumen-compra', component: ResumenCompraComponent },
+  { path: 'form-juegos', component: FormJuegosComponent },
   { path: 'detalle-juegos/:id', component: DetalleJuegosComponent },
 ];
 

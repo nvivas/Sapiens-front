@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Juego } from 'src/app/models/juego.model';
 import { JuegoService } from 'src/app/services/juego.service';
+import { PurchaseService } from '../../services/purchase.service';
 
 @Component({
   selector: 'app-detalle-juegos',
@@ -9,12 +10,13 @@ import { JuegoService } from 'src/app/services/juego.service';
   styleUrls: ['./detalle-juegos.component.scss'],
 })
 export class DetalleJuegosComponent implements OnInit {
-  juego: Juego | undefined;
+  juego!: Juego;
   juegoId: number | undefined;
 
   constructor(
     private route: ActivatedRoute,
-    private juegoService: JuegoService
+    private juegoService: JuegoService,
+    private purchaseService: PurchaseService
   ) {}
 
   ngOnInit() {
@@ -26,11 +28,6 @@ export class DetalleJuegosComponent implements OnInit {
     } else {
       console.error('Error: el parámetro id es null o undefined');
     }
-
-    // this.route.params.subscribe((params) => {
-    //   const juegoId = +params['id'];
-    //   this.obtenerJuego(juegoId);
-    // });
   }
 
   obtenerJuego(juegoId: number) {
@@ -38,4 +35,16 @@ export class DetalleJuegosComponent implements OnInit {
       this.juego = juego;
     });
   }
+
+  getImagePath(imageName: string): string {
+    console.log('./../../../assets/img/' + imageName)
+    return './../../../assets/img/' + imageName;
+  }
+
+   addToCart(item: any) {
+    console.log("Juegos: " + this.juego.nombre);
+    this.purchaseService.addToCart(item);
+  }
+
+
 }
