@@ -5,7 +5,6 @@ import { HistoriaJuegosComponent } from './component/historia-juegos/historia-ju
 import { DetalleJuegosComponent } from './component/detalle-juegos/detalle-juegos.component';
 import { InicioComponent } from './component/inicio/inicio.component';
 import { ResumenCompraComponent } from './component/resumen-compra/resumen-compra.component';
-import { FormJuegosComponent } from './component/form-juegos/form-juegos.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full'},
@@ -13,7 +12,6 @@ const routes: Routes = [
   { path: 'juegos', component: ListaJuegosComponent },
   { path: 'historia-juegos', component: HistoriaJuegosComponent },
   { path: 'resumen-compra', component: ResumenCompraComponent },
-  { path: 'form-juegos', component: FormJuegosComponent },
   { path: 'detalle-juegos/:id', component: DetalleJuegosComponent },
 ];
 

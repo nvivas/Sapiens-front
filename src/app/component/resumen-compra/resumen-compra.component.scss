@@ -1,4 +1,46 @@
+.contenedor {
+  border: 1px solid #ccc;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
 
+.titulo {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
 td {
-  border: 1px solid black;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: normal;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
+.boton {
+  display: block;
+  width: 30%;
+  padding: 15px;
+  background-color: #8B4513;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin: 20px auto;
+  border: none;
+  cursor: pointer;
 }

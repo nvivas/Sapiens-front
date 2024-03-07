@@ -15,7 +15,6 @@ import { InicioComponent } from './component/inicio/inicio.component';
 import { FilterPipe } from './filter.pipe';
 import { PurchaseService } from './services/purchase.service';
 import { ResumenCompraComponent } from './component/resumen-compra/resumen-compra.component';
-import { FormJuegosComponent } from './component/form-juegos/form-juegos.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -31,7 +30,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     InicioComponent,
     FilterPipe,
     ResumenCompraComponent,
-    FormJuegosComponent
   ],
   imports: [
     FormsModule,

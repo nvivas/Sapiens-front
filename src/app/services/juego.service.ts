@@ -12,24 +12,27 @@ export class JuegoService {
   private apiUrl = environment.apiUrl + '/juegos';
   private juegosSubject = new BehaviorSubject<any[]>([]);
   juegos$ = this.juegosSubject.asObservable();
-
   juegos: Juego[] = [];
+  total: number = 0;
 
   constructor(private http: HttpClient, private purchaseService: PurchaseService) { }
 
 
   obtenerJuegosAgregados(items:any[]): void {
-    console.log("service");
-    console.log(items)
-    // const juegosAgregados = this.purchaseService.getJuegosAgregados();
     const juegosAgregadosArray = Array.from(items);
-
-    // Iterar sobre los IDs de los juegos agregados y obtener los juegos correspondientes
     const observables = juegosAgregadosArray.map(juegoId => this.getJuegoDataById(juegoId));
-    // Combinar todos los observables en un solo observable
+
     forkJoin(observables).subscribe(
       (items: Juego[]) => {
         this.juegosSubject.next(items);
+        console.log("juegosSubject Service")
+        let juegos = this.juegosSubject.getValue();
+        for (let juego of juegos) {
+          console.log(juego.nombre);
+          console.log(juego.precio);
+          this.total += +juego.precio;
+          console.log("Total " + this.total);
+        }
       },
       (error) => {
         console.error('Error al obtener los juegos agregados:', error);

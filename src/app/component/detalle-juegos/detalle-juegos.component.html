@@ -4,7 +4,8 @@
     <div class="product-info">
       <h2>{{juego.nombre}}</h2>
       <p class="product-price">{{ juego.precio }} €</p>
-      <button (click)="addToCart(juego.id)">Comprar</button>
+      <button (click)="addToCart(juego.id)" *ngIf="juego.stock > 0">Comprar</button>
+      <label *ngIf="juego.stock == 0">Agotado</label>
     </div>
   </div>
   <p class="texto">{{ juego.descripcion }}</p>

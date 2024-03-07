@@ -56,3 +56,31 @@
 .navegacion .nav-item {
   padding: 5px 0;
 }
+
+.shopping-cart {
+  display: inline-flex;
+  align-items: center;
+  font-size: 24px;
+  color: #cfd8dc;
+  margin-right: 5px;
+  position: relative;
+}
+
+.shopping-cart svg {
+  width: 24px;
+  height: 24px;
+}
+
+.badge {
+  display: inline-block;
+  min-width: 15px;
+  height: 15px;
+  line-height: 15px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}

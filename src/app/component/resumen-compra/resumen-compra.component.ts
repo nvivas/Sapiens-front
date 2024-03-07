@@ -1,5 +1,6 @@
 // resumen-compra.component.ts
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { PurchaseService } from '../../services/purchase.service';
 import { Juego } from 'src/app/models/juego.model';
 import { JuegoService } from 'src/app/services/juego.service';
@@ -17,21 +18,28 @@ export class ResumenCompraComponent implements OnInit {
   itemCount: number = 0;
   juegoId: number | undefined;
   juego!: Juego;
-  total: number = 0;
+  total: number | undefined;
 
   private clearCartSubscription: Subscription = new Subscription();
 
-  constructor(private purchaseService: PurchaseService, private juegoService: JuegoService, private route: ActivatedRoute) {  }
+  constructor(
+    private purchaseService: PurchaseService,
+    private juegoService: JuegoService,
+    private route: ActivatedRoute,
+    private location: Location
+  ) {}
 
   ngOnInit(): void {
     this.items = this.purchaseService.getItems();
     this.purchaseService.getDataFromDatabase();
     this.obtenerJuegosAgregados();
     // Suscribirse al evento de carrito borrado
-    this.clearCartSubscription = this.purchaseService.getClearCartObservable().subscribe(() => {
-      this.items = [];
-      this.updateItemCount();
-    });
+    this.clearCartSubscription = this.purchaseService
+      .getClearCartObservable()
+      .subscribe(() => {
+        this.items = [];
+        this.updateItemCount();
+      });
 
     this.calculateTotal();
   }
@@ -43,13 +51,10 @@ export class ResumenCompraComponent implements OnInit {
   }
 
   obtenerJuegosAgregados(): void {
-    console.log("obtenerJuegosAgregados")
-    console.log(this.items);
     this.juegoService.obtenerJuegosAgregados(this.items);
     this.juegoService.juegos$.subscribe(
       (juegos: Juego[]) => {
         this.juegos = juegos;
-
       },
       (error) => {
         console.error('Error al obtener los juegos agregados:', error);
@@ -75,6 +80,7 @@ export class ResumenCompraComponent implements OnInit {
 
   borrarCarrito() {
     this.purchaseService.clearCart();
+    window.location.reload();
   }
 
   private updateItemCount() {
@@ -82,12 +88,8 @@ export class ResumenCompraComponent implements OnInit {
   }
 
   calculateTotal(): void {
-    // this.items.precio;
-    // const totalItems = this.itemCount * this.items.precio;
-    if (this.items.every(item => typeof item.precio === 'number')) {
-      this.total = this.items.reduce((acc, item) => acc + item.precio, 0);
-    } else {
-      console.error('Alguno de los elementos en el arreglo "items" no tiene una propiedad "precio" que sea un número.');
-    }
+    this.juegoService.juegos$.subscribe((total) => {
+      this.total = this.juegos.reduce((acc, juego) => acc + +juego.precio, 0);
+    });
   }
 }
