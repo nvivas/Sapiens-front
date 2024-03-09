@@ -1,0 +1,36 @@
+.game-documentation {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-documentation h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+.game-documentation h2 {
+  font-size: 24px;
+  color: #555;
+  margin-top: 20px;
+}
+
+.game-documentation p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #777;
+}
+
+/* Estilos adicionales para resaltar la conclusión */
+.game-documentation h2:last-of-type {
+  color: #0066cc;
+  margin-top: 40px;
+}
+
+.game-documentation p:last-of-type {
+  font-weight: bold;
+}

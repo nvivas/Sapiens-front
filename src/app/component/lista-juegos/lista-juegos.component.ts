@@ -25,37 +25,35 @@ export class ListaJuegosComponent implements OnInit {
 
   constructor(private juego: ApiService ,private translate: TranslateService, private juegosService: JuegoService,
                     private router: Router, private purchaseService: PurchaseService) {
-                      this.getJuegos();
                     }
 
   ngOnInit(): void {
     this.getJuegos();
   }
 
+  obtenerJuego(nombre: string) {
+    // Agrega un mensaje de depuración para verificar que el método se está invocando correctamente
+    console.log('Obteniendo juego con nombre:', nombre);
+
+    this.juegosService.obtenerJuegoPorNombre(nombre).subscribe(response => {
+      console.log('Juego encontrado:', response);
+      // Realiza cualquier acción adicional con el juego encontrado
+    }, error => {
+      console.error('Error al obtener el juego:', error);
+    });
+  }
+
   getJuegos(): void {
     this.juego.getJuegos().subscribe(juego => this.juegos = juego);
   }
-
-  // searchGames(): void {
-  //   this.filteredItems = this.juegos.filter(item => item.nombre.toLowerCase().includes(this.searchTerm.toLowerCase()));
-  // }
 
   searchGames(event: Event): void {
     this.filteredItems = this.juegos.filter(item => item.nombre.toLowerCase().includes((event.target as HTMLInputElement).value.toLowerCase()));
     console.log(this.filteredItems);
     const filterValue = (event.target as HTMLInputElement).value;
   }
-  // cambiarIdioma(idioma: string) {
-  //   this.translate.use(idioma); // Cambiar el idioma de la aplicación
-  // }
 
   getImagePath(imageName: string): string {
     return './../../../assets/img/' + imageName;
-  }
-
-  filtrarJuegosPorNombre() {
-    return this.juegos.filter(juego =>
-      juego.nombre.toLowerCase().includes(this.nombreFiltrado.toLowerCase())
-    );
   }
 }

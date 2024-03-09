@@ -1,0 +1,85 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-button {
+  background-color: chocolate;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.send-confirmation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.send-confirmation-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.send-confirmation-name,
+.send-confirmation-email,
+.send-confirmation-phone,
+.send-confirmation-message {
+  font-size: 14px;
+  color: #333;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.form-input,
+.form-textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-textarea {
+  height: 100px;
+}
+
+.send-confirmation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.send-confirmation-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.send-confirmation-data {
+  font-size: 14px
+}

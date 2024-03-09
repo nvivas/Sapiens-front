@@ -1,5 +1,7 @@
-<input type="text" [value]="searchTerm" (input)="searchGames($event)" placeholder="Buscar juegos...">
-<button (click)="searchGames($event)">Buscar</button>
+<form (submit)="obtenerJuego(nombreInput.value)">
+  <input type="text" #nombreInput placeholder="Buscar por nombre">
+  <button type="submit">Buscar</button>
+</form>
 
 <div class="container">
   <!-- Recorrer todos los juegos -->

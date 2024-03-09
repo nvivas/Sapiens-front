@@ -1,0 +1,25 @@
+<div *ngIf="!correoEnviado">
+  <form [formGroup]="contacto" (ngSubmit)="onSubmit()" class="contact-form">
+    <label for="nombre" class="form-label">Nombre</label>
+    <input id="nombre" formControlName="nombre" required class="form-input">
+
+    <label for="email" class="form-label">Correo Electrónico</label>
+    <input id="email" type="email" formControlName="email" required class="form-input">
+
+    <label for="telefono" class="form-label">Número de Teléfono</label>
+    <input id="telefono" type="tel" formControlName="telefono" class="form-input">
+
+    <label for="mensaje" class="form-label">Mensaje</label>
+    <textarea id="mensaje" formControlName="mensaje" class="form-textarea"></textarea>
+
+    <button type="submit" (click)="enviarCorreo()" class="form-button">Enviar</button>
+  </form>
+</div>
+
+<div *ngIf="correoEnviado" class="send-confirmation">
+  <h2 class="send-confirmation-title">¡Correo electrónico enviado!</h2>
+  <p class="send-confirmation-name">Nombre: {{ contacto.get('nombre')?.value }}</p>
+  <p class="send-confirmation-email">Email: {{ contacto.get('email')?.value }}</p>
+  <p class="send-confirmation-phone">Teléfono: {{ contacto.get('telefono')?.value }}</p>
+  <p class="send-confirmation-message">Mensaje: {{ contacto.get('mensaje')?.value }}</p>
+</div>

@@ -18,6 +18,14 @@ export class JuegoService {
   constructor(private http: HttpClient, private purchaseService: PurchaseService) { }
 
 
+  enviarNombre(nombre: string) {
+    return this.http.get<Juego>(`${this.apiUrl}?nombre=${nombre}`);
+  }
+
+  obtenerJuegoPorNombre(nombre: string): Observable<any> {
+    console.log('Enviando nombre a Laravel:', nombre);
+    return this.http.get<Juego>(`${this.apiUrl}/${nombre}`);
+  }
   obtenerJuegosAgregados(items:any[]): void {
     const juegosAgregadosArray = Array.from(items);
     const observables = juegosAgregadosArray.map(juegoId => this.getJuegoDataById(juegoId));
@@ -42,7 +50,7 @@ export class JuegoService {
 
    // Obtener solo el ID, nombre y precio del juego
    private getJuegoDataById(id: number): Observable<Juego> {
-    return this.http.get<Juego>(`${this.apiUrl}/${id}`).pipe(
+    return this.http.get<Juego>(`${this.apiUrl}?id=${id}`).pipe(
       map((juego: Juego) => ({
         id: juego.id,
         nombre: juego.nombre,
