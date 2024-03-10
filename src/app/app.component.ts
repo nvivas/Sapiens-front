@@ -16,4 +16,3 @@ export class AppComponent {
     this.translate.use(idioma); // Cambia el idioma
   }
 }
- 
