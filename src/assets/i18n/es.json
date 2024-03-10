@@ -32,7 +32,9 @@
   "lista": {
     "disponible": "Disponible",
     "en-stock": "en stock",
-    "agotado": "Agotado"
+    "agotado": "Agotado",
+    "buscar": "Buscar",
+    "precio": "Precio"
   },
 
   "inicio": {
@@ -49,6 +51,54 @@
     "accesorios": "Accesorios",
     "rol": "Juego de Rol 'ESDLA'",
     "contacto": "Contacto"
-  }
+  },
 
+  "idioma": {
+    "español": "Español",
+    "ingles": "Inglés"
+  },
+
+  "contacto": {
+    "nombre": "Nombre",
+    "correo": "Correo Electrónico",
+    "telefono": "Número de Teléfono",
+    "mensaje": "Mensaje",
+    "enviar": "Enviar",
+    "mensajeEnviado": "¡Correo electrónico enviado!"
+  },
+
+  "detalle": {
+    "comprar": "Comprar",
+    "agotado": "Agotado",
+    "categoria": "Categoria: ",
+    "precio": "Precio: "
+  },
+
+  "rol": {
+    "nombre-juego": "Nombre del Juego: Tierra Media: El Rol del Anillo",
+    "descripcion": "Descripcion:",
+    "txt-descripcion": "\"Tierra Media: El Rol del Anillo\" es un juego de rol ambientado en el universo de \"El Señor de los Anillos\". Los jugadores se sumergen en la Tierra Media, exploran sus vastas tierras y se enfrentan a los desafíos que acechan en la oscuridad de Sauron. El juego se juega con 2 dados de 10 caras",
+    "sistema-juego": "Sistema de Juego:",
+    "txt-sistema-juego": "El juego utiliza un sistema de reglas basado en la mecánica de 2 dados de 10 caras (d10). La narrativa y la interpretación de personajes son fundamentales para el desarrollo de la historia. Cada tirada de dados influye en el éxito o fracaso de las acciones de los personajes.",
+    "ambientacion": "Ambientación:",
+    "txt-ambientacion": "El juego está ambientado en la Tercera Edad de la Tierra Media, durante los eventos narrados en 'El Señor de los Anillos'. Los jugadores tienen la oportunidad de explorar lugares icónicos como la Comarca, Rivendel, Gondor, Rohan y Mordor, sumergiéndose en la rica historia del mundo creado por J.R.R. Tolkien.",
+    "creacion": "Creación de Personajes:",
+    "txt-creacion": "Los jugadores pueden elegir entre diversas razas de la Tierra Media, como Hobbits, Elfos, Enanos y Hombres. Cada raza ofrece habilidades y ventajas únicas. Además, los personajes seleccionan una clase, como guerrero, mago, explorador, que determina sus habilidades y especializaciones en el juego.",
+    "mecanicas": "Mecánicas de Juego:",
+    "txt-mecanicas": "El sistema de juego se basa en tiradas de 2 dados de 10 caras. Diferentes acciones y tareas tienen niveles de dificultad que influyen en el resultado de las tiradas. La interpretación de personajes y la toma de decisiones éticas son elementos clave, reflejando los temas fundamentales de la obra de Tolkien.",
+    "narrativa": "Narrativa:",
+    "txt-narrativa": "La narrativa del juego sigue los eventos principales de 'El Señor de los Anillos'. Sin embargo, los jugadores tienen la libertad de explorar historias secundarias y crear sus propias aventuras dentro del mundo de la Tierra Media. Interactuarán con personajes icónicos y enfrentarán criaturas y enemigos característicos del universo de Tolkien.",
+    "exploracion": "Supervivencia y Exploración:",
+    "txt-exploracion": "El juego incorpora elementos de supervivencia y exploración. Los personajes deben enfrentarse a peligros naturales y criaturas hostiles mientras viajan por la Tierra Media. La gestión de recursos, como alimentos, agua y refugio, es crucial para la supervivencia en este mundo lleno de desafíos."
+  },
+
+  "resumen": {
+    "compra": "Resumen Compra",
+    "nombre": "Nombre",
+    "precio": "Precio",
+    "total": "Total:",
+    "borrar-carrito": "Borrar Carrito",
+    "comprar-ahora": "Comprar Ahora",
+    "gracias": "¡Gracias por su compra!"
+  }
 }

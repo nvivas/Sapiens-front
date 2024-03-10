@@ -50,7 +50,7 @@ export class JuegoService {
 
    // Obtener solo el ID, nombre y precio del juego
    private getJuegoDataById(id: number): Observable<Juego> {
-    return this.http.get<Juego>(`${this.apiUrl}?id=${id}`).pipe(
+    return this.http.get<Juego>(`${this.apiUrl}/${id}`).pipe(
       map((juego: Juego) => ({
         id: juego.id,
         nombre: juego.nombre,

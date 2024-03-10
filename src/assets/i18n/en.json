@@ -1,54 +1,102 @@
 {
   "titulo": {
     "principal": "JUEGOS SAPIENS",
-    "antiguo": "Antiguo",
-    "moderno": "Moderno",
-    "clasicos": "Clásicos"
+    "antiguo": "Ancient",
+    "moderno": "Modern",
+    "clasicos": "Classics"
   },
 
   "historia": {
     "antigua": "Ancient History",
     "moderna": "Modern History",
-    "txtAntigua": "According to history, board games emerged in ancient Mesopotamia around 5,000 BC. They were called 'soul-passage games,' as they were buried with the dead to accompany them into what they believed to be the afterlife. board games. According to Mesopotamian tradition, these games were considered objects of extreme sentimental value to people, as they provided an opportunity for entertainment and interaction between friends or members of the same family. When trade routes began to expand, games also began to circulate. Thus, new options emerged to adapt to new peoples and new cultures. Chess, for example, has as a possible precursor an Indian game called 'Chaturanga'. The game of checkers, in turn, may have its origin in the Inca culture. And it was also found as part of the tradition of some Brazilian Indian tribes, called 'Jogo da Onça'. Over the years, many variations of board games were created, becoming more and more fun and full of details.",
-    "txtModerna": "Most of the games we know today come from the period after the Industrial Revolution, thereafter, with the possibility of scale production and wider circulation. These fun resources have spread widely around the world, becoming a children's sensation for many generations, but before that they also made history on the stage of the great wars that ravaged mankind. It is said that soldiers who fought throughout the two world wars were placed to play board games with other comrades, so they were encouraged to think and reason logically. The idea was to learn how to create defensive and attack strategies, as well as enjoy a bit of distraction in the midst of the hostile environment. In the period known as the Cold War, most of today's traditional board games, such as checkers, various card games and dominoes, became popular. And they reached a high rate of manufacture, mainly in the United States and Europe, which permeated the playful and fun world of children who did not know the attractions of cyberspace.",
-    "antiguedad": "Seniority",
-    "ajedrez": "Ajedrez",
-    "edad-media": "Edad Media",
-    "juegos-edad-media": "Juegos de mesa en la Edad Media",
-    "revolucion": "Revolución Industrial",
-    "revolucion-industrial": "Renacimiento y Revolución Industrial",
-    "siglo": "Siglo XX y XXI",
-    "moderno": "Moderno",
-    "renacimiento-juegos": "Renacimiento de los juegos de mesa modernos",
-    "historia-clasicos-modernos": "Historia de los Juegos de mesa Clásicos y Modernos",
-    "txtantiguedad": "Los juegos de mesa tienen sus raíces en la antigüedad, con juegos como el Senet en el antiguo Egipto, que se remonta a alrededor del 3500 a.C. Este juego era popular entre los faraones y se jugaba tanto por diversión como como parte de rituales funerarios.",
-    "txtajedrez": "Uno de los juegos de mesa más antiguos y populares es el ajedrez, que se cree que se originó en la India alrededor del siglo VI d.C. Desde entonces, el ajedrez se ha convertido en uno de los juegos estratégicos más jugados en todo el mundo.",
-    "txtedad-media": "Durante la Edad Media, los juegos de mesa como el backgammon y el mancala se volvieron populares en diversas culturas de todo el mundo. Estos juegos a menudo se jugaban como una forma de entretenimiento en la corte real y entre la nobleza.",
-    "txtRevolucion": " Durante el Renacimiento y la Revolución Industrial, los juegos de mesa se hicieron más accesibles a medida que la impresión permitía la producción en masa de juegos como el Monopoly y el Scrabble. Estos juegos se convirtieron en elementos básicos en muchos hogares y continuaron evolucionando con el tiempo.",
-    "txtsiglo": "En el siglo XX, la popularidad de los juegos de mesa continuó creciendo con la introducción de juegos como Risk, Trivial Pursuit y Settlers of Catan. Con el advenimiento de Internet, los juegos de mesa en línea también se volvieron populares, permitiendo a las personas jugar con amigos y desconocidos de todo el mundo.",
-    "txtrenacimiento": "En las últimas décadas, ha habido un renacimiento de los juegos de mesa modernos, con una amplia variedad de juegos nuevos y emocionantes que abarcan una variedad de géneros y mecánicas. Juegos como Ticket to Ride, Carcassonne y Pandemic han ganado popularidad tanto entre jugadores casuales como entre entusiastas más dedicados."
+    "txtAntigua": "According to history, board games originated in ancient Mesopotamia around 5,000 years BC. They were called 'soul passage games', as they were buried alongside the dead to accompany them in what they believed was the afterlife. Board games were considered objects of extreme sentimental value to people, as they provided an opportunity for entertainment and interaction among friends or family members. As trade routes began to expand, games also began to circulate. Thus, new options emerged to adapt to new peoples and cultures. Chess, for example, has a possible precursor in an Indian game called 'Chaturanga'. Checkers, in turn, may have its origin in Inca culture. And it was also found as part of the tradition of some Brazilian indigenous tribes, called 'Jogo da Onça'. Over the years, many variations of board games were created, becoming increasingly fun and full of details.",
+    "txtModerna": "Most of the games we know today come from the period after the Industrial Revolution, from then on, with the possibility of production on a large scale and greater circulation. These fun resources have spread widely throughout the world, becoming a childhood sensation for many generations, but before that, they also made history on the stage of the great wars that ravaged humanity. It is said that soldiers who fought through both world wars were placed to play board games with other comrades, thus being encouraged to think and reason logically. The idea was to learn to create defensive and offensive strategies, as well as to enjoy a bit of distraction amidst the hostile environment. During the period known as the Cold War, most of today's traditional board games, such as checkers, various card games, or dominoes, became popular. And they reached a high manufacturing index, mainly in the United States and Europe, which impregnated the playful and fun world of children who did not know the attractions of cyberspace.",
+    "antiguedad": "Antiquity",
+    "ajedrez": "Chess",
+    "edad-media": "Middle Ages",
+    "juegos-edad-media": "Board Games in the Middle Ages",
+    "revolucion": "Industrial Revolution",
+    "revolucion-industrial": "Renaissance and Industrial Revolution",
+    "siglo": "20th and 21st Century",
+    "moderno": "Modern",
+    "renacimiento-juegos": "Renaissance of Modern Board Games",
+    "historia-clasicos-modernos": "History of Classic and Modern Board Games",
+    "txtantiguedad": "Board games have their roots in antiquity, with games like Senet in ancient Egypt, dating back to around 3500 BC. This game was popular among pharaohs and was played both for fun and as part of funerary rituals.",
+    "txtajedrez": "One of the oldest and most popular board games is chess, which is believed to have originated in India around the 6th century AD. Since then, chess has become one of the most played strategic games worldwide.",
+    "txtedad-media": "During the Middle Ages, board games like backgammon and mancala became popular in various cultures around the world. These games were often played as a form of entertainment in the royal court and among the nobility.",
+    "txtRevolucion": "During the Renaissance and the Industrial Revolution, board games became more accessible as printing allowed for mass production of games like Monopoly and Scrabble. These games became staples in many households and continued to evolve over time.",
+    "txtsiglo": "In the 20th century, the popularity of board games continued to grow with the introduction of games like Risk, Trivial Pursuit, and Settlers of Catan. With the advent of the Internet, online board games also became popular, allowing people to play with friends and strangers from around the world.",
+    "txtrenacimiento": "In recent decades, there has been a renaissance of modern board games, with a wide variety of new and exciting games spanning a range of genres and mechanics. Games like Ticket to Ride, Carcassonne, and Pandemic have gained popularity among casual players as well as more dedicated enthusiasts."
   },
 
   "lista": {
-    "disponible": "Disponible",
-    "en-stock": "en stock",
-    "agotado": "Agotado"
+    "disponible": "Available",
+    "en-stock": "In Stock",
+    "agotado": "Out of Stock",
+    "buscar": "Search",
+    "precio": "Price"
   },
 
   "inicio": {
-    "principal": "Juegos Sapiens",
-    "texto-bienvenidos": "¡Bienvenidos a Juegos Sapiens! Si eres un amante de los juegos de mesa, estás en el lugar indicado. En este artículo, te llevaré a explorar el fascinante mundo de los juegos de mesa y te presentaré una página web que se convertirá en tu paraíso: la tienda online de Juegos Sapiens. ¡Prepárate para sumergirte en la diversión y la estrategia que solo los juegos de mesa pueden brindarte!",
-    "secundario": "Juegos de mesa",
-    "texto-juegos": "Los juegos de mesa son una forma increíblemente divertida y entretenida de pasar el tiempo con amigos y familia. Desde clásicos como el Monopoly y el ajedrez hasta juegos más modernos e innovadores, hay opciones para todos los gustos y edades. Lo mejor de los juegos de mesa es la interacción cara a cara que fomentan, creando momentos memorables y risas contagiosas. La variedad de juegos disponibles es asombrosa: desde estrategia pura hasta cooperativos donde todos trabajan juntos para alcanzar un objetivo común. Además, los juegos de mesa pueden ser educativos, ayudando a desarrollar habilidades cognitivas, sociales y emocionales en jugadores jóvenes y adultos por igual. Ya sea que prefieras resolver acertijos difíciles, competir en intensas batallas tácticas o simplemente disfrutar del momento con tus seres queridos, los juegos de mesa ofrecen algo especial para cada ocasión. ¡Así que no dudes en reunirte alrededor de la mesa, repartir las cartas o mover las piezas sobre el tablero y sumérgete en la emoción infinita que solo los juegos de mesa pueden brindarte!"
+    "principal": "Sapiens Games",
+    "texto-bienvenidos": "Welcome to Sapiens Games! If you are a board game lover, you are in the right place. In this article, I will take you to explore the fascinating world of board games and introduce you to a website that will become your paradise: the online store of Sapiens Games. Get ready to immerse yourself in the fun and strategy that only board games can bring!",
+    "secundario": "Board Games",
+    "texto-juegos": "Board games are an incredibly fun and entertaining way to spend time with friends and family. From classics like Monopoly and chess to more modern and innovative games, there are options for every taste and age. The best thing about board games is the face-to-face interaction they foster, creating memorable moments and contagious laughter. The variety of games available is amazing: from pure strategy to cooperative games where everyone works together to achieve a common goal. Additionally, board games can be educational, helping to develop cognitive, social, and emotional skills in players young and old alike. Whether you prefer solving challenging puzzles, competing in intense tactical battles, or simply enjoying the moment with your loved ones, board games offer something special for every occasion. So don't hesitate to gather around the table, deal the cards, or move the pieces on the board and immerse yourself in the infinite excitement that only board games can bring!"
   },
 
   "navegacion": {
-    "inicio": "Inicio",
-    "juegos": "Juegos",
-    "historia": "Historia de los juegos",
-    "accesorios": "Accesorios",
-    "rol": "Juego de Rol 'ESDLA'",
-    "contacto": "Contacto"
-  }
+    "inicio": "Home",
+    "juegos": "Games",
+    "historia": "History of Games",
+    "accesorios": "Accessories",
+    "rol": "Role-playing Game 'LOTR'",
+    "contacto": "Contact"
+  },
 
+  "idioma": {
+    "español": "Spanish",
+    "ingles": "English"
+  },
+
+  "contacto": {
+    "nombre": "Name",
+    "correo": "Email",
+    "telefono": "Phone Number",
+    "mensaje": "Message",
+    "enviar": "Send",
+    "mensajeEnviado": "Email sent!"
+  },
+
+  "detalle": {
+    "comprar": "Buy",
+    "agotado": "Out of Stock"
+  },
+
+  "rol": {
+    "nombre-juego": "Game Name: Middle Earth: The Ring Role-play",
+    "descripcion": "Description:",
+    "txt-descripcion": "\"Middle Earth: The Ring Role-play\" is a role-playing game set in the universe of \"The Lord of the Rings\". Players immerse themselves in Middle Earth, explore its vast lands, and face the challenges lurking in the darkness of Sauron. The game is played with 2 ten-sided dice.",
+    "sistema-juego": "Game System:",
+    "txt-sistema-juego": "The game uses a rules system based on the mechanics of 2 ten-sided dice (d10). Narrative and character interpretation are fundamental to the development of the story. Each dice roll influences the success or failure of the characters' actions.",
+    "ambientacion": "Setting:",
+    "txt-ambientacion": "The game is set in the Third Age of Middle Earth, during the events narrated in 'The Lord of the Rings'. Players have the opportunity to explore iconic places such as the Shire, Rivendell, Gondor, Rohan, and Mordor, immersing themselves in the rich history of the world created by J.R.R. Tolkien.",
+    "creacion": "Character Creation:",
+    "txt-creacion": "Players can choose from various races of Middle Earth, such as Hobbits, Elves, Dwarves, and Men. Each race offers unique skills and advantages. Additionally, characters select a class, such as warrior, wizard, scout, which determines their abilities and specializations in the game.",
+    "mecanicas": "Game Mechanics:",
+    "txt-mecanicas": "The game system is based on rolls of 2 ten-sided dice. Different actions and tasks have difficulty levels that influence the outcome of the rolls. Character interpretation and ethical decision-making are key elements, reflecting the fundamental themes of Tolkien's work.",
+    "narrativa": "Narrative:",
+    "txt-narrativa": "The game's narrative follows the main events of 'The Lord of the Rings'. However, players have the freedom to explore secondary stories and create their own adventures within the world of Middle Earth. They will interact with iconic characters and face creatures and enemies characteristic of Tolkien's universe.",
+    "exploracion": "Survival and Exploration:",
+    "txt-exploracion": "The game incorporates elements of survival and exploration. Characters must face natural dangers and hostile creatures while traveling through Middle Earth. Managing resources such as food, water, and shelter is crucial for survival in this challenging world."
+  },
+
+  "resumen": {
+    "compra": "Purchase Summary",
+    "nombre": "Name",
+    "precio": "Price",
+    "total": "Total:",
+    "borrar-carrito": "Clear Cart",
+    "comprar-ahora": "Buy Now",
+    "gracias": "Thank you for your purchase!"
+  }
 }
