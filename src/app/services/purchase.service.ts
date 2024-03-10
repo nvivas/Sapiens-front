@@ -29,9 +29,9 @@ export class PurchaseService {
     this.updateItemCount(); // Actualiza el contador cuando se añade un elemento
   }
 
-  getJuegosAgregados(): Set<number> {
-    return this.juegosAgregados;
-  }
+  // getJuegosAgregados(): Set<number> {
+  //   return this.juegosAgregados;
+  // }
 
   getItems(): any[] {
     console.log(this.items)
@@ -77,9 +77,9 @@ export class PurchaseService {
     return this.http.get<any[]>(this.apiUrl);
   }
 
-  borrarCarrito() {
-    this.items = [];
-    this.saveCart();
-    this.clearCartSubject.next(); // Emitir evento de carrito borrado
-  }
+  // borrarCarrito() {
+  //   this.items = [];
+  //   this.saveCart();
+  //   this.clearCartSubject.next(); // Emitir evento de carrito borrado
+  // }
 }

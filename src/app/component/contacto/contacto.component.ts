@@ -22,19 +22,14 @@ export class ContactoComponent {
   constructor(private fb: FormBuilder) {}
 
   onSubmit() {
-    // Lógica para enviar el formulario
-    console.log(this.contacto.value);
+  console.log("Enviado")
   }
 
   enviarCorreo() {
-    // Aquí podrías enviar el correo electrónico usando un servicio HTTP
-    // y luego, cuando la respuesta sea exitosa, ejecutar lo siguiente:
-
-    // Simulando un tiempo de espera antes de mostrar el mensaje de éxito
     setTimeout(() => {
       this.correoEnviado = true;
-      this.mensajeExito = 'El correo electrónico ha sido enviado.';
+      this.mensajeExito = '';
       this.email = ''; // Vaciar el campo de correo electrónico
-    }, 2000); // Espera de 2 segundos
+    }, 1000);
   }
 }

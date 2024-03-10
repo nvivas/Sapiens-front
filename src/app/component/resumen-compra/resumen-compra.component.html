@@ -1,26 +1,35 @@
-<div class="contenedor">
-  <h1 class="titulo">Resumen compra</h1>
-  <table class="tabla">
-    <thead>
-      <tr>
-        <th>Nombre</th>
-        <th>Precio</th>
-      </tr>
-    </thead>
-    <tbody *ngFor="let juego of juegos">
-      <tr >
-        <td>{{ juego.nombre }}</td>
-        <td>{{ juego.precio }}</td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td>Total:</td>
-        <td>{{ total }}</td>
-      </tr>
-    </tfoot>
-  </table>
+<div class="compra" *ngIf="!comprarAhora">
+  <div class="contenedor">
+    <h1 class="titulo">{{ "resumen.compra" | translate }}</h1>
+    <table class="tabla">
+      <thead>
+        <tr>
+          <th>{{ "resumen.nombre" | translate }}</th>
+          <th>{{ "resumen.precio" | translate }}</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let juego of juegos">
+        <tr >
+          <td>{{ juego.nombre }}</td>
+          <td>{{ juego.precio }}</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>{{ "resumen.total" | translate }}</td>
+          <td>{{ total }}</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="botones">
+    <button class="boton" (click)="borrarCarrito()">{{ "resumen.borrar-carrito" | translate }}</button>
+    <button class="boton" (click)="comprar()">{{ "resumen.comprar-ahora" | translate }}</button>
+  </div>
 </div>
-<button class="boton" (click)="borrarCarrito()">Borrar carrito</button>
+
+<div class="compraAhora" *ngIf="comprarAhora">
+  <h2 class="comprado">{{ "resumen.gracias" | translate }}</h2>
+</div>
 
 

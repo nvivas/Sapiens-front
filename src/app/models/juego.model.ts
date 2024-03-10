@@ -6,5 +6,5 @@ export interface Juego {
     categoria: string;
     stock: number;
     imagen_ruta: string;
+    descripcion_ingles: string;
   }
-  

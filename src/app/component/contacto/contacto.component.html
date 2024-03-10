@@ -1,25 +1,25 @@
 <div *ngIf="!correoEnviado">
   <form [formGroup]="contacto" (ngSubmit)="onSubmit()" class="contact-form">
-    <label for="nombre" class="form-label">Nombre</label>
+    <label for="nombre" class="form-label">{{ "contacto.nombre" | translate }}</label>
     <input id="nombre" formControlName="nombre" required class="form-input">
 
-    <label for="email" class="form-label">Correo Electrónico</label>
+    <label for="email" class="form-label">{{ "contacto.correo" | translate }}</label>
     <input id="email" type="email" formControlName="email" required class="form-input">
 
-    <label for="telefono" class="form-label">Número de Teléfono</label>
+    <label for="telefono" class="form-label">{{ "contacto.telefono" | translate }}</label>
     <input id="telefono" type="tel" formControlName="telefono" class="form-input">
 
-    <label for="mensaje" class="form-label">Mensaje</label>
+    <label for="mensaje" class="form-label">{{ "contacto.mensaje" | translate }}</label>
     <textarea id="mensaje" formControlName="mensaje" class="form-textarea"></textarea>
 
-    <button type="submit" (click)="enviarCorreo()" class="form-button">Enviar</button>
+    <button type="submit" (click)="enviarCorreo()" class="form-button">{{ "contacto.enviar" | translate }}</button>
   </form>
 </div>
 
 <div *ngIf="correoEnviado" class="send-confirmation">
-  <h2 class="send-confirmation-title">¡Correo electrónico enviado!</h2>
-  <p class="send-confirmation-name">Nombre: {{ contacto.get('nombre')?.value }}</p>
-  <p class="send-confirmation-email">Email: {{ contacto.get('email')?.value }}</p>
-  <p class="send-confirmation-phone">Teléfono: {{ contacto.get('telefono')?.value }}</p>
-  <p class="send-confirmation-message">Mensaje: {{ contacto.get('mensaje')?.value }}</p>
+  <h2 class="send-confirmation-title">{{ "contacto.mensajeEnviado" | translate }}</h2>
+  <p class="send-confirmation-name">{{ "contacto.nombre" | translate }}: {{ contacto.get('nombre')?.value }}</p>
+  <p class="send-confirmation-email">{{ "contacto.correo" | translate }}: {{ contacto.get('email')?.value }}</p>
+  <p class="send-confirmation-phone">{{ "contacto.telefono" | translate }}: {{ contacto.get('telefono')?.value }}</p>
+  <p class="send-confirmation-message">{{ "contacto.mensaje" | translate }}: {{ contacto.get('mensaje')?.value }}</p>
 </div>

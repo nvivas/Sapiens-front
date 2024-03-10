@@ -19,6 +19,7 @@ export class ResumenCompraComponent implements OnInit {
   juegoId: number | undefined;
   juego!: Juego;
   total: number | undefined;
+  comprarAhora: boolean = false;
 
   private clearCartSubscription: Subscription = new Subscription();
 
@@ -44,11 +45,11 @@ export class ResumenCompraComponent implements OnInit {
     this.calculateTotal();
   }
 
-  obtenerJuego(juegoId: number) {
-    this.juegoService.getJuegoById(juegoId).subscribe((juego) => {
-      this.juego = juego;
-    });
-  }
+  // obtenerJuego(juegoId: number) {
+  //   this.juegoService.getJuegoById(juegoId).subscribe((juego) => {
+  //     this.juego = juego;
+  //   });
+  // }
 
   obtenerJuegosAgregados(): void {
     this.juegoService.obtenerJuegosAgregados(this.items);
@@ -62,16 +63,16 @@ export class ResumenCompraComponent implements OnInit {
     );
   }
 
-  obtenerJuegos(): void {
-    this.juegoService.obtenerJuegos().subscribe(
-      (juegos: Juego[]) => {
-        this.juegos = juegos;
-      },
-      (error) => {
-        console.error('Error al obtener los juegos:', error);
-      }
-    );
-  }
+  // obtenerJuegos(): void {
+  //   this.juegoService.obtenerJuegos().subscribe(
+  //     (juegos: Juego[]) => {
+  //       this.juegos = juegos;
+  //     },
+  //     (error) => {
+  //       console.error('Error al obtener los juegos:', error);
+  //     }
+  //   );
+  // }
 
   ngOnDestroy(): void {
     // Liberar la suscripción al salir del componente
@@ -91,5 +92,10 @@ export class ResumenCompraComponent implements OnInit {
     this.juegoService.juegos$.subscribe((total) => {
       this.total = this.juegos.reduce((acc, juego) => acc + +juego.precio, 0);
     });
+  }
+
+  comprar() {
+    this.comprarAhora = true;
+    this.purchaseService.clearCart();
   }
 }

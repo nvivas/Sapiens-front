@@ -44,3 +44,10 @@ tfoot td {
   border: none;
   cursor: pointer;
 }
+
+.botones {
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
