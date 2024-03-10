@@ -12,20 +12,11 @@ export class JuegoService {
   private apiUrl = environment.apiUrl + '/juegos';
   private juegosSubject = new BehaviorSubject<any[]>([]);
   juegos$ = this.juegosSubject.asObservable();
-  juegos: Juego[] = [];
   total: number = 0;
 
-  constructor(private http: HttpClient, private purchaseService: PurchaseService) { }
+  constructor(private http: HttpClient) { }
 
 
-  enviarNombre(nombre: string) {
-    return this.http.get<Juego>(`${this.apiUrl}?nombre=${nombre}`);
-  }
-
-  obtenerJuegoPorNombre(nombre: string): Observable<any> {
-    console.log('Enviando nombre a Laravel:', nombre);
-    return this.http.get<Juego>(`${this.apiUrl}/${nombre}`);
-  }
   obtenerJuegosAgregados(items:any[]): void {
     const juegosAgregadosArray = Array.from(items);
     const observables = juegosAgregadosArray.map(juegoId => this.getJuegoDataById(juegoId));
@@ -58,27 +49,15 @@ export class JuegoService {
         descripcion:juego.descripcion,
         categoria: juego.categoria,
         stock: juego.stock,
-        imagen_ruta: juego.imagen_ruta
+        imagen_ruta: juego.imagen_ruta,
+        descripcion_ingles: juego.descripcion_ingles
       }))
     );
-  }
-  obtenerJuegos() {
-    return this.http.get<any[]>(this.apiUrl);
   }
 
   getJuegoById(id: number) {
     console.log("getJuegoById")
     // console.log(this.http.get<any>(`${this.apiUrl}/${id}`))
     return this.http.get<any>(`${this.apiUrl}/${id}`);
-  }
-  filtrarJuegos(nombre: string): void {
-    if (nombre === 'todos') {
-      this.juegosSubject.next(this.juegos);
-    } else {
-      const juegosFiltrados = this.juegos.filter(
-        (juego) => juego.nombre === nombre
-      );
-      this.juegosSubject.next(juegosFiltrados);
-    }
   }
 }

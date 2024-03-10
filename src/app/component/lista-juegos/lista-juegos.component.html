@@ -1,7 +1,3 @@
-<form (submit)="obtenerJuego(nombreInput.value)">
-  <input type="text" #nombreInput placeholder="Buscar por nombre">
-  <button type="submit">Buscar</button>
-</form>
 
 <div class="container">
   <!-- Recorrer todos los juegos -->
@@ -9,7 +5,7 @@
     <a [routerLink]="['/detalle-juegos', juego.id]">
       <h3>{{ juego.nombre }}</h3>
       <img [src]="getImagePath(juego.imagen_ruta)" alt="{{ juego.imagen_ruta }}" class="imagenJuego" />
-      <p class="precio">Precio: {{ juego.precio }}</p>
+      <p class="precio">{{"lista.precio" | translate}}: {{ juego.precio }}</p>
       <p *ngIf="juego.stock > 0" class="disponible stock">{{ "lista.disponible" | translate }} </p>
       <p *ngIf="juego.stock == 0" class="no_disponible stock">{{ "lista.agotado" | translate }}</p>
     </a>
