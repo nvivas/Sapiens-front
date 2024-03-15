@@ -1,3 +1,10 @@
+<div class="col-lg-2">
+  <div class="filtro-box">
+    <h4>Filtrar por:</h4>
+    <input type="text" (input)="onInputChange($event)" placeholder="Buscar..."/>
+    <button (click)="filtro()">Buscar</button>
+  </div>
+</div>
 
 <div class="container">
   <!-- Recorrer todos los juegos -->
@@ -11,5 +18,3 @@
     </a>
   </div>
 </div>
-
-

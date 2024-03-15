@@ -1,11 +1,10 @@
 // resumen-compra.component.ts
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
 import { PurchaseService } from '../../services/purchase.service';
 import { Juego } from 'src/app/models/juego.model';
 import { JuegoService } from 'src/app/services/juego.service';
 import { Subscription } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-resumen-compra',
@@ -16,19 +15,42 @@ export class ResumenCompraComponent implements OnInit {
   items: Juego[] = [];
   juegos: Juego[] = [];
   itemCount: number = 0;
-  juegoId: number | undefined;
-  juego!: Juego;
   total: number | undefined;
   comprarAhora: boolean = false;
+  checkoutForm: FormGroup;
+  confirmationMessage: string = '';
 
   private clearCartSubscription: Subscription = new Subscription();
 
-  constructor(
-    private purchaseService: PurchaseService,
+  constructor(private purchaseService: PurchaseService,
     private juegoService: JuegoService,
-    private route: ActivatedRoute,
-    private location: Location
-  ) {}
+    private formBuilder: FormBuilder
+  ) {
+
+    this.checkoutForm = this.formBuilder.group({
+      nombre: ['', Validators.required],
+      apellidos: ['', Validators.required],
+      direccion: ['', Validators.required],
+      codigoPostal: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      telefono: ['', Validators.required]
+    });
+  }
+
+  checkout() {
+    if (this.checkoutForm.valid) {
+      this.confirmationMessage = `¡Gracias por su compra, ${this.checkoutForm.value.nombre}!
+        Sus datos de contacto son:
+        Nombre: ${this.checkoutForm.value.nombre}
+        Apellidos: ${this.checkoutForm.value.apellidos}
+        Dirección: ${this.checkoutForm.value.direccion}
+        Código Postal: ${this.checkoutForm.value.codigoPostal}
+        Correo Electrónico: ${this.checkoutForm.value.email}
+        Teléfono: ${this.checkoutForm.value.telefono}
+      `;
+      this.checkoutForm.reset();
+    }
+  }
 
   ngOnInit(): void {
     this.items = this.purchaseService.getItems();
@@ -45,12 +67,6 @@ export class ResumenCompraComponent implements OnInit {
     this.calculateTotal();
   }
 
-  // obtenerJuego(juegoId: number) {
-  //   this.juegoService.getJuegoById(juegoId).subscribe((juego) => {
-  //     this.juego = juego;
-  //   });
-  // }
-
   obtenerJuegosAgregados(): void {
     this.juegoService.obtenerJuegosAgregados(this.items);
     this.juegoService.juegos$.subscribe(
@@ -62,17 +78,6 @@ export class ResumenCompraComponent implements OnInit {
       }
     );
   }
-
-  // obtenerJuegos(): void {
-  //   this.juegoService.obtenerJuegos().subscribe(
-  //     (juegos: Juego[]) => {
-  //       this.juegos = juegos;
-  //     },
-  //     (error) => {
-  //       console.error('Error al obtener los juegos:', error);
-  //     }
-  //   );
-  // }
 
   ngOnDestroy(): void {
     // Liberar la suscripción al salir del componente
