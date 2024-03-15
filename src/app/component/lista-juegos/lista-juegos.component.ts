@@ -21,9 +21,7 @@ export class ListaJuegosComponent implements OnInit {
   items: any[] = [];
   textoInput: string = '';
 
-  constructor(
-    private juego: ApiService
-  ) {}
+  constructor(private juego: ApiService) {}
 
   ngOnInit(): void {
     this.getJuegos();
@@ -50,13 +48,14 @@ export class ListaJuegosComponent implements OnInit {
   }
 
   filtro(): void {
-    if (this.textoInput) {
-      const juegosFiltrados = this.juegosOriginales.filter(
-        (juego) => juego.nombre === this.textoInput
-      );
-      this.juegos = juegosFiltrados;
-    } else {
-      this.juegos = this.juegosOriginales;
-    }
+    // const textoInputLower = this.textoInput.toLowerCase(); // Convertir texto de búsqueda a minúsculas
+    // const juegosFiltrados = this.juegosOriginales.filter(
+    //   (juego) => juego.nombre.toLowerCase() === textoInputLower
+    // );
+    // this.juegos = juegosFiltrados;
+
+    const textoInputLower = this.textoInput.toLowerCase(); // Convertir texto de búsqueda a minúsculas
+  const juegosFiltrados = this.juegosOriginales.filter(juego => juego.nombre.toLowerCase().includes(textoInputLower));
+  this.juegos = juegosFiltrados;
   }
 }
