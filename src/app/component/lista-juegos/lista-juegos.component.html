@@ -1,8 +1,9 @@
 <div class="col-lg-2">
   <div class="filtro-box">
-    <h4>Filtrar por:</h4>
-    <input type="text" (input)="onInputChange($event)" placeholder="Buscar..."/>
-    <button (click)="filtro()">Buscar</button>
+    <!-- <h4>Filtrar por:</h4> -->
+    <input type="text" class=".filtro-input" (input)="onInputChange($event)" placeholder="Buscar..."/>
+    <button (click)="filtro()" class="filtro-button">Buscar</button>
+    <button (click)="mostrarTodos()" class="filtro-button">Mostrar Todos</button>
   </div>
 </div>
 

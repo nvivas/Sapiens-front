@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Juego } from '../../models/juego.model';
 import { ApiService } from '../../services/api.service';
-import { TranslateService } from '@ngx-translate/core';
-import { JuegoService } from 'src/app/services/juego.service';
-import { ActivatedRoute, Route, Router } from '@angular/router';
-import { PurchaseService } from '../../services/purchase.service';
-import { environment } from 'src/environments/environment';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-lista-juegos',
@@ -16,9 +10,6 @@ import { HttpClient } from '@angular/common/http';
 export class ListaJuegosComponent implements OnInit {
   juegosOriginales: Juego[] = [];
   juegos: Juego[] = [];
-  juegoId!: number;
-  juegoPrueba: Juego | undefined;
-  items: any[] = [];
   textoInput: string = '';
 
   constructor(private juego: ApiService) {}
@@ -35,11 +26,6 @@ export class ListaJuegosComponent implements OnInit {
     this.textoInput = event.target.value;
   }
 
-  obtenerTexto(): void {
-    console.log('Texto del input:', this.textoInput);
-    // Aquí puedes hacer lo que quieras con el valor del input
-  }
-
   getJuegos(): void {
     this.juego.getJuegos().subscribe((juegos) => {
       this.juegos = juegos;
@@ -48,14 +34,14 @@ export class ListaJuegosComponent implements OnInit {
   }
 
   filtro(): void {
-    // const textoInputLower = this.textoInput.toLowerCase(); // Convertir texto de búsqueda a minúsculas
-    // const juegosFiltrados = this.juegosOriginales.filter(
-    //   (juego) => juego.nombre.toLowerCase() === textoInputLower
-    // );
-    // this.juegos = juegosFiltrados;
+    const textoInputLower = this.textoInput.toLowerCase();
+    const juegosFiltrados = this.juegosOriginales.filter((juego) =>
+      juego.nombre.toLowerCase().includes(textoInputLower)
+    );
+    this.juegos = juegosFiltrados;
+  }
 
-    const textoInputLower = this.textoInput.toLowerCase(); // Convertir texto de búsqueda a minúsculas
-  const juegosFiltrados = this.juegosOriginales.filter(juego => juego.nombre.toLowerCase().includes(textoInputLower));
-  this.juegos = juegosFiltrados;
+  mostrarTodos(): void {
+    this.juegos = this.juegosOriginales;
   }
 }

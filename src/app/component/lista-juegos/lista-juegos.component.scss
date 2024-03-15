@@ -4,26 +4,6 @@ form {
   margin-bottom: 20px;
 }
 
-input[type="text"] {
-  flex-grow: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px 0 0 5px;
-}
-
-button[type="submit"] {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 0 5px 5px 0;
-  background-color: #337ab7;
-  color: white;
-  cursor: pointer;
-}
-
-button[type="submit"]:hover {
-  background-color: #23527c;
-}
-
 /* Estilos para el contenedor de juegos */
 .container {
   display: flex;
@@ -79,4 +59,35 @@ button[type="submit"]:hover {
 
 .no_disponible {
   background-color: #d9534f;
+}
+
+.filtro-box {
+  display: flex;
+  width: 500px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.filtro-input {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 1rem;
+  flex-grow: 1;
+}
+
+.filtro-button {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  background-color: #8B4513;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.filtro-button:hover {
+  background-color: #6b3916;
 }

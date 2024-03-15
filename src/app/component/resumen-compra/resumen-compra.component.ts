@@ -38,6 +38,7 @@ export class ResumenCompraComponent implements OnInit {
   }
 
   checkout() {
+    console.log("entra aquí")
     if (this.checkoutForm.valid) {
       this.confirmationMessage = `¡Gracias por su compra, ${this.checkoutForm.value.nombre}!
         Sus datos de contacto son:
@@ -56,7 +57,6 @@ export class ResumenCompraComponent implements OnInit {
     this.items = this.purchaseService.getItems();
     this.purchaseService.getDataFromDatabase();
     this.obtenerJuegosAgregados();
-    // Suscribirse al evento de carrito borrado
     this.clearCartSubscription = this.purchaseService
       .getClearCartObservable()
       .subscribe(() => {

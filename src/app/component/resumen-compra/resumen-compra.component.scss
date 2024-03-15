@@ -44,6 +44,9 @@ tfoot td {
   border: none;
   cursor: pointer;
 }
+.boton:hover {
+  background-color: #6b3916;
+}
 
 .botones {
   display: flex;
@@ -86,7 +89,7 @@ input[type="tel"]:focus {
 
 button[type="submit"] {
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #8B4513;
   color: white;
   border: none;
   border-radius: 5px;
@@ -96,7 +99,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #6b3916;
 }
 
 button[type="submit"]:disabled {
@@ -146,4 +149,9 @@ button[type="submit"]:disabled {
 
 .checkout-form .ng-dirty {
   border-color: #3c763d;
+}
+
+.comprar-ahora {
+  display: flex;
+  justify-content: center;
 }

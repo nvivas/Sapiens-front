@@ -28,32 +28,20 @@
   </div>
 </div>
 
-<div class="compraAhora" *ngIf="comprarAhora">
+<div class="comprar-ahora" *ngIf="comprarAhora">
   <form [formGroup]="checkoutForm" (ngSubmit)="checkout()" class="checkout-form">
-    <label>
-      Nombre:
-      <input type="text" formControlName="nombre" class="form-control" required>
-    </label>
-    <label>
-      Apellidos:
-      <input type="text" formControlName="apellidos" class="form-control" required>
-    </label>
-    <label>
-      Dirección:
-      <input type="text" formControlName="direccion" class="form-control" required>
-    </label>
-    <label>
-      Código Postal:
-      <input type="text" formControlName="codigoPostal" class="form-control" required>
-    </label>
-    <label>
-      Correo Electrónico:
-      <input type="email" formControlName="email" class="form-control" required>
-    </label>
-    <label>
-      Teléfono:
-      <input type="tel" formControlName="telefono" class="form-control" required>
-    </label>
+    <label>Nombre:</label>
+    <input type="text" formControlName="nombre" class="form-control" required>
+    <label>Apellidos:</label>
+    <input type="text" formControlName="apellidos" class="form-control" required>
+    <label>Dirección:</label>
+    <input type="text" formControlName="direccion" class="form-control" required>
+    <label>Código Postal:</label>
+    <input type="text" formControlName="codigoPostal" class="form-control" required>
+    <label>Correo Electrónico:</label>
+    <input type="email" formControlName="email" class="form-control" required>
+    <label>Teléfono:</label>
+    <input type="tel" formControlName="telefono" class="form-control" required>
     <button type="submit" class="btn btn-primary">Comprar Ahora</button>
   </form>
 
