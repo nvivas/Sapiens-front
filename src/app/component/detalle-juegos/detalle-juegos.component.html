@@ -1,15 +1,21 @@
 <div class="contenedor-principal">
   <div class="contenedor">
-    <img [src]="getImagePath(juego.imagen_ruta)" alt="Juego de mesa" class="imagen" />
-    <div class="product-info">
-      <h2>{{juego.nombre}}</h2>
-      <p class="product-price">{{"detalle.precio" | translate}} {{ juego.precio }} €</p>
-      <p class="product-price">{{"detalle.categoria" | translate}} {{ juego.categoria }}</p>
-      <button (click)="addToCart(juego.id)" *ngIf="juego.stock > 0">{{ "detalle.comprar" | translate }}</button>
-      <label *ngIf="juego.stock == 0">{{ "detalle.agotado" | translate }}</label>
+    <div *ngIf="juego && juego.imagen_ruta">
+      <img [src]="getImagePath(juego.imagen_ruta)" alt="Juego de mesa" class="imagen" />
+    </div>
+    <div *ngIf="juego">
+      <div class="product-info">
+        <h2>{{juego.nombre}}</h2>
+        <p class="product-price">{{"detalle.precio" | translate}} {{ juego.precio }} €</p>
+        <p class="product-price">{{"detalle.categoria" | translate}} {{ juego.categoria }}</p>
+        <button (click)="addToCart(juego.id)" *ngIf="juego.stock > 0">{{ "detalle.comprar" | translate }}</button>
+        <label *ngIf="juego.stock == 0">{{ "detalle.agotado" | translate }}</label>
+      </div>
     </div>
   </div>
-  <p class="texto" *ngIf="isIdioma">{{ juego.descripcion }}</p>
-  <p class="texto" *ngIf="!isIdioma">{{ juego.descripcion_ingles }}</p>
+  <div *ngIf="juego">
+    <p class="texto" *ngIf="isIdioma">{{ juego.descripcion }}</p>
+    <p class="texto" *ngIf="!isIdioma">{{ juego.descripcion_ingles }}</p>
+  </div>
 </div>
 

@@ -7,7 +7,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container" *ngIf="!isVacio">
   <!-- Recorrer todos los juegos -->
   <div *ngFor="let juego of juegos" class="juego">
     <a [routerLink]="['/detalle-juegos', juego.id]">
@@ -18,4 +18,8 @@
       <p *ngIf="juego.stock == 0" class="no_disponible stock">{{ "lista.agotado" | translate }}</p>
     </a>
   </div>
+</div>
+
+<div class="container" *ngIf="isVacio">
+  <h2>Juego no encontrado</h2>
 </div>

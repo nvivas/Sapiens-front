@@ -11,6 +11,7 @@ export class ListaJuegosComponent implements OnInit {
   juegosOriginales: Juego[] = [];
   juegos: Juego[] = [];
   textoInput: string = '';
+  isVacio: boolean = false;
 
   constructor(private juego: ApiService) {}
 
@@ -39,6 +40,12 @@ export class ListaJuegosComponent implements OnInit {
       juego.nombre.toLowerCase().includes(textoInputLower)
     );
     this.juegos = juegosFiltrados;
+    this.isVacio = false;
+
+    if(juegosFiltrados.length === 0) {
+      this.isVacio = true;
+    }
+
   }
 
   mostrarTodos(): void {

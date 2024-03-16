@@ -19,38 +19,33 @@ export class ResumenCompraComponent implements OnInit {
   comprarAhora: boolean = false;
   checkoutForm: FormGroup;
   confirmationMessage: string = '';
+  mensaje: boolean = false;
 
   private clearCartSubscription: Subscription = new Subscription();
 
-  constructor(private purchaseService: PurchaseService,
+  constructor(
+    private purchaseService: PurchaseService,
     private juegoService: JuegoService,
     private formBuilder: FormBuilder
   ) {
-
     this.checkoutForm = this.formBuilder.group({
       nombre: ['', Validators.required],
       apellidos: ['', Validators.required],
       direccion: ['', Validators.required],
       codigoPostal: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      telefono: ['', Validators.required]
+      telefono: ['', Validators.required],
     });
   }
 
   checkout() {
-    console.log("entra aquí")
-    if (this.checkoutForm.valid) {
-      this.confirmationMessage = `¡Gracias por su compra, ${this.checkoutForm.value.nombre}!
-        Sus datos de contacto son:
-        Nombre: ${this.checkoutForm.value.nombre}
-        Apellidos: ${this.checkoutForm.value.apellidos}
-        Dirección: ${this.checkoutForm.value.direccion}
-        Código Postal: ${this.checkoutForm.value.codigoPostal}
-        Correo Electrónico: ${this.checkoutForm.value.email}
-        Teléfono: ${this.checkoutForm.value.telefono}
-      `;
-      this.checkoutForm.reset();
-    }
+    setTimeout(() => {
+      this.mensaje = true;
+    }, 1000);
+  }
+
+  onSubmit() {
+    console.log('Enviado');
   }
 
   ngOnInit(): void {
@@ -80,7 +75,6 @@ export class ResumenCompraComponent implements OnInit {
   }
 
   ngOnDestroy(): void {
-    // Liberar la suscripción al salir del componente
     this.clearCartSubscription.unsubscribe();
   }
 

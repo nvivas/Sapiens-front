@@ -42,7 +42,6 @@ export class DetalleJuegosComponent implements OnInit {
 
   getImagePath(imageName: string): string {
     const ruta = './../../../assets/img/';
-    console.log(ruta + imageName);
     return ruta + imageName;
   }
 

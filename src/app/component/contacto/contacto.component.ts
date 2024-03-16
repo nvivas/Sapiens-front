@@ -4,10 +4,9 @@ import { FormBuilder, Validators } from '@angular/forms';
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contacto.component.html',
-  styleUrls: ['./contacto.component.scss']
+  styleUrls: ['./contacto.component.scss'],
 })
 export class ContactoComponent {
-
   email: string = '';
   correoEnviado: boolean = false;
   mensajeExito: string = '';
@@ -22,7 +21,7 @@ export class ContactoComponent {
   constructor(private fb: FormBuilder) {}
 
   onSubmit() {
-  console.log("Enviado")
+    console.log('Enviado');
   }
 
   enviarCorreo() {
