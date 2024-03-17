@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Juego } from '../../models/juego.model';
 import { ApiService } from '../../services/api.service';
 
@@ -8,12 +8,14 @@ import { ApiService } from '../../services/api.service';
   styleUrls: ['./lista-juegos.component.scss'],
 })
 export class ListaJuegosComponent implements OnInit {
+
+  @ViewChild('filtroInput') filtroInput: ElementRef | undefined;
   juegosOriginales: Juego[] = [];
   juegos: Juego[] = [];
   textoInput: string = '';
   isVacio: boolean = false;
 
-  constructor(private juego: ApiService) {}
+  constructor(private juego: ApiService, private elementRef: ElementRef) {}
 
   ngOnInit(): void {
     this.getJuegos();
@@ -48,7 +50,10 @@ export class ListaJuegosComponent implements OnInit {
 
   }
 
-  mostrarTodos(): void {
+  mostrarTodos(inputElement: HTMLInputElement): void {
+    this.isVacio = false;
     this.juegos = this.juegosOriginales;
+    inputElement.value = '';
+
   }
 }
