@@ -97,16 +97,18 @@
 
   "resumen": {
     "compra": "Resumen Compra",
-    "nombre": "Nombre",
+    "nombre": "Nombre:",
     "precio": "Precio",
     "total": "Total:",
     "borrar-carrito": "Borrar Carrito",
     "comprar-ahora": "Comprar Ahora",
-    "gracias": "¡Gracias por su compra!",
-    "apellidos": "Apellidos",
-    "cp": "Código postal",
-    "telefono": "Número de Teléfono",
-    "direccion": "Dirección",
-    "correo":"Correo Electrónico"
+    "gracias": "¡Gracias por su compra, ",
+    "apellidos": "Apellidos: ",
+    "cp": "Código postal: ",
+    "telefono": "Número de Teléfono: ",
+    "direccion": "Dirección: ",
+    "correo":"Correo Electrónico: ",
+    "datos":"Sus datos de contacto son: ",
+    "pedido": "! Su pedido se está preparando"
   }
 }

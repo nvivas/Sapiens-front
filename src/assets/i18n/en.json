@@ -102,11 +102,13 @@
     "total": "Total:",
     "borrar-carrito": "Clear Cart",
     "comprar-ahora": "Buy Now",
-    "gracias": "Thank you for your purchase!",
+    "gracias": "Thank you for your purchase, ",
     "apellidos": "Surname",
     "cp": "Postal Code",
     "telefono": "Telephone number",
     "direccion": "Address",
-    "correo":"E-mail"
+    "correo":"E-mail",
+    "datos":"Your contact information is: ",
+    "pedido": "! Your order is being prepared"
   }
 }

@@ -32,9 +32,9 @@ export class ResumenCompraComponent implements OnInit {
       nombre: ['', Validators.required],
       apellidos: ['', Validators.required],
       direccion: ['', Validators.required],
-      codigoPostal: ['', Validators.required],
+      codigoPostal: ['', Validators.required, Validators.min(5),  Validators.max(5)],
       email: ['', [Validators.required, Validators.email]],
-      telefono: ['', Validators.required],
+      telefono: ['', [Validators.required, Validators.min(9),  Validators.max(9)]]
     });
   }
 

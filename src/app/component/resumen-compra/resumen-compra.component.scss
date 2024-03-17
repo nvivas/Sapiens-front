@@ -36,7 +36,7 @@ tfoot td {
   display: block;
   width: 30%;
   padding: 15px;
-  background-color: #8B4513;
+  background-color: #8b4513;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -89,7 +89,7 @@ input[type="tel"]:focus {
 
 button[type="submit"] {
   padding: 10px 20px;
-  background-color: #8B4513;
+  background-color: #8b4513;
   color: white;
   border: none;
   border-radius: 5px;
@@ -108,14 +108,14 @@ button[type="submit"]:disabled {
 }
 
 .confirmation-message {
-  display: none;
-  margin-top: 20px;
+  margin-top: 100px;
   padding: 20px;
-  background-color: #dff0d8;
-  border: 1px solid #3c763d;
   border-radius: 5px;
   font-size: 1.2rem;
   line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .confirmation-message h3 {
@@ -154,4 +154,20 @@ button[type="submit"]:disabled {
 .comprar-ahora {
   display: flex;
   justify-content: center;
+}
+
+.imagen {
+  width: 500px;
+}
+
+.imagen-contenedor {
+  display: flex;
+  justify-content: center;
+}
+
+.confirmation-text {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
 }
