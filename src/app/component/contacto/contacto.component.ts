@@ -28,7 +28,7 @@ export class ContactoComponent {
     setTimeout(() => {
       this.correoEnviado = true;
       this.mensajeExito = '';
-      this.email = ''; // Vaciar el campo de correo electrónico
+      this.email = '';
     }, 1000);
   }
 }

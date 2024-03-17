@@ -47,13 +47,11 @@ export class ListaJuegosComponent implements OnInit {
     if(juegosFiltrados.length === 0) {
       this.isVacio = true;
     }
-
   }
 
   mostrarTodos(inputElement: HTMLInputElement): void {
     this.isVacio = false;
     this.juegos = this.juegosOriginales;
     inputElement.value = '';
-
   }
 }

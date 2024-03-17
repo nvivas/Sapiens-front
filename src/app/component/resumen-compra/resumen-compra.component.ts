@@ -18,7 +18,6 @@ export class ResumenCompraComponent implements OnInit {
   total: number | undefined;
   comprarAhora: boolean = false;
   checkoutForm: FormGroup;
-  confirmationMessage: string = '';
   mensaje: boolean = false;
 
   private clearCartSubscription: Subscription = new Subscription();

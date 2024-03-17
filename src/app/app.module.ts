@@ -12,7 +12,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DetalleJuegosComponent } from './component/detalle-juegos/detalle-juegos.component';
 import { InicioComponent } from './component/inicio/inicio.component';
-import { FilterPipe } from './filter.pipe';
 import { PurchaseService } from './services/purchase.service';
 import { ResumenCompraComponent } from './component/resumen-compra/resumen-compra.component';
 import { ContactoComponent } from './component/contacto/contacto.component';
@@ -30,7 +29,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     HistoriaJuegosComponent,
     DetalleJuegosComponent,
     InicioComponent,
-    FilterPipe,
     ResumenCompraComponent,
     ContactoComponent,
     JuegoRolComponent

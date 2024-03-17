@@ -4,10 +4,10 @@
       <img [src]="getImagePath(juego.imagen_ruta)" alt="Juego de mesa" class="imagen" />
     </div>
     <div *ngIf="juego">
-      <div class="product-info">
+      <div class="juego-info">
         <h2>{{juego.nombre}}</h2>
-        <p class="product-price">{{"detalle.precio" | translate}} {{ juego.precio }} €</p>
-        <p class="product-price">{{"detalle.categoria" | translate}} {{ juego.categoria }}</p>
+        <p class="juego-detalle">{{"detalle.precio" | translate}} {{ juego.precio }} €</p>
+        <p class="juego-detalle">{{"detalle.categoria" | translate}} {{ juego.categoria }}</p>
         <button (click)="addToCart(juego.id)" *ngIf="juego.stock > 0">{{ "detalle.comprar" | translate }}</button>
         <label *ngIf="juego.stock == 0">{{ "detalle.agotado" | translate }}</label>
       </div>

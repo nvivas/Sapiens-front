@@ -107,7 +107,7 @@ button[type="submit"]:disabled {
   cursor: not-allowed;
 }
 
-.confirmation-message {
+.confirmacion-mensaje {
   margin-top: 100px;
   padding: 20px;
   border-radius: 5px;
@@ -118,12 +118,12 @@ button[type="submit"]:disabled {
   flex-direction: column;
 }
 
-.confirmation-message h3 {
+.confirmacion-mensaje h3 {
   margin-top: 0;
   margin-bottom: 10px;
 }
 
-.confirmation-message p {
+.confirmacion-mensaje p {
   margin: 0;
 }
 
@@ -165,7 +165,7 @@ button[type="submit"]:disabled {
   justify-content: center;
 }
 
-.confirmation-text {
+.confirmacion-texto {
   display: flex;
   flex-direction: column;
   align-content: center;

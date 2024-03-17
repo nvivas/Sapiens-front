@@ -14,7 +14,6 @@ export class PurchaseService {
   private storageKey = 'carrito';
   private clearCartSubject: Subject<void> = new Subject<void>();
   private juegosAgregados: Set<number> = new Set<number>();
-
   private apiUrl = environment.apiUrl + '/juegos';
 
   constructor(private http: HttpClient) {
@@ -76,10 +75,4 @@ export class PurchaseService {
     console.log(this.http.get<any[]>(this.apiUrl))
     return this.http.get<any[]>(this.apiUrl);
   }
-
-  // borrarCarrito() {
-  //   this.items = [];
-  //   this.saveCart();
-  //   this.clearCartSubject.next(); // Emitir evento de carrito borrado
-  // }
 }

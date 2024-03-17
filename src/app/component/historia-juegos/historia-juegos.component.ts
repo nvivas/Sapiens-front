@@ -12,20 +12,15 @@ export class HistoriaJuegosComponent implements OnInit {
   ngOnInit(): void {
   }
 
-// Método para llevar al usuario al principio de la página
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  selectedSection: string = ''; // Propiedad para almacenar la sección seleccionada
-
+  selectedSection: string = '';
   scrollToSection(id: string) {
-    const section = document.getElementById(id); // Obtener el elemento de la sección
+    const section = document.getElementById(id);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' }); // Desplazar la página a la sección
+      section.scrollIntoView({ behavior: 'smooth' });
     }
   }
-
-
-
 }

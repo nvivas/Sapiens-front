@@ -57,16 +57,11 @@ export class JuegoService {
   }
 
   getJuegoById(id: number) {
-    console.log("getJuegoById")
-    // console.log(this.http.get<any>(`${this.apiUrl}/${id}`))
     return this.http.get<any>(`${this.apiUrl}/${id}`);
   }
 
   filtrarProductos(categoria: string): void {
     console.log("Entra en filtrar productos del servicio");
-    // if (categoria === 'todos') {
-    //   this.juegosSubject.next(this.juego);
-    // } else {
       const juegosFiltrados = this.juego.filter(
         (juegoFiltro) => juegoFiltro.categoria === categoria
       );
@@ -74,8 +69,5 @@ export class JuegoService {
 
       console.log("Juegos Filtrados: " + juegosFiltrados);
       console.log("juegosSubject.next: " + this.juegosSubject.next(juegosFiltrados));
-
-
-    // }
   }
 }

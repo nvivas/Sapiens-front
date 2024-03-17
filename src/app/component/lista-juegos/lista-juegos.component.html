@@ -1,6 +1,6 @@
 <div class="col-lg-2">
-  <div class="filtro-box">
-    <input #filtroInput type="text" class="filtro-input" (input)="onInputChange($event)" placeholder="Buscar..."/>
+  <div class="contenedor-filtro">
+    <input #filtroInput type="text" class="filtro-input" (input)="onInputChange($event)" placeholder="Buscar por nombre..."/>
     <button (click)="filtro()" class="filtro-button">{{ "lista.buscar" | translate }}</button>
     <button (click)="mostrarTodos(filtroInput)" class="filtro-button">{{ "lista.mostrar" | translate }} </button>
   </div>
