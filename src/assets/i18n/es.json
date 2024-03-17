@@ -26,7 +26,8 @@
     "txtedad-media": "Durante la Edad Media, los juegos de mesa como el backgammon y el mancala se volvieron populares en diversas culturas de todo el mundo. Estos juegos a menudo se jugaban como una forma de entretenimiento en la corte real y entre la nobleza.",
     "txtRevolucion": " Durante el Renacimiento y la Revolución Industrial, los juegos de mesa se hicieron más accesibles a medida que la impresión permitía la producción en masa de juegos como el Monopoly y el Scrabble. Estos juegos se convirtieron en elementos básicos en muchos hogares y continuaron evolucionando con el tiempo.",
     "txtsiglo": "En el siglo XX, la popularidad de los juegos de mesa continuó creciendo con la introducción de juegos como Risk, Trivial Pursuit y Settlers of Catan. Con el advenimiento de Internet, los juegos de mesa en línea también se volvieron populares, permitiendo a las personas jugar con amigos y desconocidos de todo el mundo.",
-    "txtrenacimiento": "En las últimas décadas, ha habido un renacimiento de los juegos de mesa modernos, con una amplia variedad de juegos nuevos y emocionantes que abarcan una variedad de géneros y mecánicas. Juegos como Ticket to Ride, Carcassonne y Pandemic han ganado popularidad tanto entre jugadores casuales como entre entusiastas más dedicados."
+    "txtrenacimiento": "En las últimas décadas, ha habido un renacimiento de los juegos de mesa modernos, con una amplia variedad de juegos nuevos y emocionantes que abarcan una variedad de géneros y mecánicas. Juegos como Ticket to Ride, Carcassonne y Pandemic han ganado popularidad tanto entre jugadores casuales como entre entusiastas más dedicados.",
+    "volver": "Volver arriba"
   },
 
   "lista": {
@@ -34,7 +35,9 @@
     "en-stock": "en stock",
     "agotado": "Agotado",
     "buscar": "Buscar",
-    "precio": "Precio"
+    "precio": "Precio",
+    "mostrar": "Mostrar todos",
+    "no-encontrado": "Juego no encontrado"
   },
 
   "inicio": {
@@ -99,6 +102,11 @@
     "total": "Total:",
     "borrar-carrito": "Borrar Carrito",
     "comprar-ahora": "Comprar Ahora",
-    "gracias": "¡Gracias por su compra!"
+    "gracias": "¡Gracias por su compra!",
+    "apellidos": "Apellidos",
+    "cp": "Código postal",
+    "telefono": "Número de Teléfono",
+    "direccion": "Dirección",
+    "correo":"Correo Electrónico"
   }
 }

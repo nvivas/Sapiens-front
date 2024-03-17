@@ -30,25 +30,25 @@
 
 <div class="comprar-ahora" *ngIf="comprarAhora && !mensaje">
   <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="checkout-form">
-    <label>Nombre:</label>
+    <label>{{ "resumen.nombre" | translate }}:</label>
     <input type="text" formControlName="nombre" class="form-control" required>
 
-    <label>Apellidos:</label>
+    <label>{{ "resumen.apellidos" | translate }}:</label>
     <input type="text" formControlName="apellidos" class="form-control" required>
 
-    <label>Dirección:</label>
+    <label>{{ "resumen.direccion" | translate }}:</label>
     <input type="text" formControlName="direccion" class="form-control" required>
 
-    <label>Código Postal:</label>
+    <label>{{ "resumen.cp" | translate }}:</label>
     <input type="text" formControlName="codigoPostal" class="form-control" required>
 
-    <label>Correo Electrónico:</label>
+    <label>{{ "resumen.correo" | translate }}:</label>
     <input type="email" formControlName="email" class="form-control" required>
 
-    <label>Teléfono:</label>
+    <label>{{ "resumen.telefono" | translate }}:</label>
     <input type="tel" formControlName="telefono" class="form-control" required>
 
-    <button type="submit" (click)="checkout()" class="btn btn-primary">Comprar Ahora</button>
+    <button type="submit" (click)="checkout()" class="btn btn-primary">{{ "resumen.comprar-ahora" | translate }}</button>
   </form>
 </div>
 

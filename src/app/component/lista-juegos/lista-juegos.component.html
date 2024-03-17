@@ -1,9 +1,8 @@
 <div class="col-lg-2">
   <div class="filtro-box">
-    <!-- <h4>Filtrar por:</h4> -->
     <input type="text" class=".filtro-input" (input)="onInputChange($event)" placeholder="Buscar..."/>
-    <button (click)="filtro()" class="filtro-button">Buscar</button>
-    <button (click)="mostrarTodos()" class="filtro-button">Mostrar Todos</button>
+    <button (click)="filtro()" class="filtro-button">{{ "lista.buscar" | translate }}</button>
+    <button (click)="mostrarTodos()" class="filtro-button">{{ "lista.mostrar" | translate }} </button>
   </div>
 </div>
 
@@ -21,5 +20,5 @@
 </div>
 
 <div class="container" *ngIf="isVacio">
-  <h2>Juego no encontrado</h2>
+  <h2>{{ "lista.no-encontrado" | translate }}</h2>
 </div>

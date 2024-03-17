@@ -26,7 +26,8 @@
     "txtedad-media": "During the Middle Ages, board games like backgammon and mancala became popular in various cultures around the world. These games were often played as a form of entertainment in the royal court and among the nobility.",
     "txtRevolucion": "During the Renaissance and the Industrial Revolution, board games became more accessible as printing allowed for mass production of games like Monopoly and Scrabble. These games became staples in many households and continued to evolve over time.",
     "txtsiglo": "In the 20th century, the popularity of board games continued to grow with the introduction of games like Risk, Trivial Pursuit, and Settlers of Catan. With the advent of the Internet, online board games also became popular, allowing people to play with friends and strangers from around the world.",
-    "txtrenacimiento": "In recent decades, there has been a renaissance of modern board games, with a wide variety of new and exciting games spanning a range of genres and mechanics. Games like Ticket to Ride, Carcassonne, and Pandemic have gained popularity among casual players as well as more dedicated enthusiasts."
+    "txtrenacimiento": "In recent decades, there has been a renaissance of modern board games, with a wide variety of new and exciting games spanning a range of genres and mechanics. Games like Ticket to Ride, Carcassonne, and Pandemic have gained popularity among casual players as well as more dedicated enthusiasts.",
+    "volver": "Back to top"
   },
 
   "lista": {
@@ -34,7 +35,9 @@
     "en-stock": "In Stock",
     "agotado": "Out of Stock",
     "buscar": "Search",
-    "precio": "Price"
+    "precio": "Price",
+    "mostrar": "Show all",
+    "no-encontrado": "Game not found"
   },
 
   "inicio": {
@@ -99,6 +102,11 @@
     "total": "Total:",
     "borrar-carrito": "Clear Cart",
     "comprar-ahora": "Buy Now",
-    "gracias": "Thank you for your purchase!"
+    "gracias": "Thank you for your purchase!",
+    "apellidos": "Surname",
+    "cp": "Postal Code",
+    "telefono": "Telephone number",
+    "direccion": "Address",
+    "correo":"E-mail"
   }
 }
