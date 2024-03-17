@@ -20,7 +20,7 @@ export class DetalleJuegosComponent implements OnInit {
     private route: ActivatedRoute,
     private juegoService: JuegoService,
     private purchaseService: PurchaseService,
-    private translateService: TranslateService,
+    private translateService: TranslateService
   ) {}
 
   ngOnInit() {
@@ -48,13 +48,14 @@ export class DetalleJuegosComponent implements OnInit {
   addToCart(item: any) {
     console.log('Juegos: ' + this.juego.nombre);
     this.purchaseService.addToCart(item);
+    alert('Se ha añadido el juego a la cesta');
   }
 
   verificarIdiomaActual(): boolean {
     // Obtener el idioma actual o el idioma predeterminado si no está definido
     this.idioma = this.translateService.currentLang;
-    console.log("Idioma: " + this.idioma);
-    this.idioma == 'en' ? this.isIdioma = false : this.isIdioma = true;
+    console.log('Idioma: ' + this.idioma);
+    this.idioma == 'en' ? (this.isIdioma = false) : (this.isIdioma = true);
     return this.isIdioma;
   }
 }
