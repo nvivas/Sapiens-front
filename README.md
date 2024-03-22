@@ -26,7 +26,7 @@ Se debe instalar node_modules en el proyecto. Para ello, se debe lanzar el sigui
 
 ## Comentar línea
 Se debe comentar la siguiente línea en el fichero `translate.directive.d.ts`
--     // static ɵdir: i0.ɵɵDirectiveDeclaration<TranslateDirective, "[translate],[ngx-translate]", never, { "translate": { "alias": "translate"; "required": false; }; "translateParams": { "alias": "translateParams"; "required": false; }; }, {}, never, never, false, never>;
+-     static ɵdir: i0.ɵɵDirectiveDeclaration<TranslateDirective, "[translate],[ngx-translate]", never, { "translate": { "alias": "translate"; "required": false; }; "translateParams": { "alias": "translateParams"; "required": false; }; }, {}, never, never, false, never>;
 
 ## Compilar el proyecto
 Para compilar se debe ejecutar el siguiente comando en la terminal en el directorio del proyecto
