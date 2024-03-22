@@ -3,19 +3,21 @@
     <h1 class="titulo">{{ "resumen.compra" | translate }}</h1>
     <table class="tabla">
       <thead>
-        <tr>
+        <tr class="cabecera">
           <th>{{ "resumen.nombre" | translate }}</th>
           <th>{{ "resumen.precio" | translate }}</th>
+          <th>{{ "resumen.accion" | translate }}</th>
         </tr>
       </thead>
-      <tbody *ngFor="let juego of juegos">
-        <tr >
+      <tbody *ngFor="let juego of juegos; let i = index">
+        <tr class="columna">
           <td>{{ juego.nombre }}</td>
           <td>{{ juego.precio }}</td>
+          <button class="eliminar" (click)="onDeleteItem(i)">{{ "resumen.eliminar" | translate }}</button>
         </tr>
       </tbody>
       <tfoot>
-        <tr>
+        <tr class="columna">
           <td>{{ "resumen.total" | translate }}</td>
           <td>{{ total }}</td>
         </tr>
@@ -49,7 +51,7 @@
     <input type="tel" formControlName="telefono" class="form-control" required>
 
     <button type="submit" (click)="checkout()" class="btn btn-primary" [disabled]="checkoutForm.invalid">
-      {{ "resumen.comprar-ahora" | translate }}
+      {{ "resumen.finalizar" | translate }}
     </button>
   </form>
 </div>

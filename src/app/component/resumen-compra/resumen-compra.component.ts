@@ -41,6 +41,7 @@ export class ResumenCompraComponent implements OnInit {
     setTimeout(() => {
       this.mensaje = true;
     }, 1000);
+    this.purchaseService.clearCart();
   }
 
   onSubmit() {
@@ -94,6 +95,13 @@ export class ResumenCompraComponent implements OnInit {
 
   comprar() {
     this.comprarAhora = true;
-    this.purchaseService.clearCart();
+  }
+
+  onDeleteItem(index: number) {
+    this.purchaseService.deleteItem(index);
+    this.refreshPage();
+  }
+  private refreshPage(): void {
+    window.location.reload();
   }
 }

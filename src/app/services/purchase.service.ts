@@ -28,10 +28,6 @@ export class PurchaseService {
     this.updateItemCount(); // Actualiza el contador cuando se añade un elemento
   }
 
-  // getJuegosAgregados(): Set<number> {
-  //   return this.juegosAgregados;
-  // }
-
   getItems(): any[] {
     console.log(this.items)
     return this.items;
@@ -75,4 +71,14 @@ export class PurchaseService {
     console.log(this.http.get<any[]>(this.apiUrl))
     return this.http.get<any[]>(this.apiUrl);
   }
+  private refreshPage(): void {
+    window.location.reload();
+  }
+
+  deleteItem(index: number) {
+    this.items.splice(index, 1);
+    this.saveCart();
+    this.updateItemCount();
+    this.clearCartSubject.next();
+}
 }

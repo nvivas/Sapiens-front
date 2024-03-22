@@ -49,7 +49,7 @@
 
   "navegacion": {
     "inicio": "Home",
-    "juegos": "Games",
+    "juegos": "Game catalog",
     "historia": "History of Games",
     "accesorios": "Accessories",
     "rol": "Role-playing Game 'LOTR'",
@@ -109,6 +109,9 @@
     "direccion": "Address",
     "correo":"E-mail",
     "datos":"Your contact information is: ",
-    "pedido": "! Your order is being prepared"
+    "pedido": "! Your order is being prepared",
+    "finalizar": "Complete purchase",
+    "accion": "Action",
+    "eliminar": "Delete"
   }
 }

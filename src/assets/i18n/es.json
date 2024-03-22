@@ -49,7 +49,7 @@
 
   "navegacion": {
     "inicio": "Inicio",
-    "juegos": "Juegos",
+    "juegos": "Catálogo Juegos",
     "historia": "Historia de los juegos",
     "accesorios": "Accesorios",
     "rol": "Juego de Rol 'ESDLA'",
@@ -71,7 +71,7 @@
   },
 
   "detalle": {
-    "comprar": "Añadir al carro",
+    "comprar": "Añadir a la cesta",
     "agotado": "Agotado",
     "categoria": "Categoria: ",
     "precio": "Precio: "
@@ -100,7 +100,7 @@
     "nombre": "Nombre:",
     "precio": "Precio",
     "total": "Total:",
-    "borrar-carrito": "Borrar Carrito",
+    "borrar-carrito": "Borrar la cesta",
     "comprar-ahora": "Comprar Ahora",
     "gracias": "¡Gracias por su compra, ",
     "apellidos": "Apellidos: ",
@@ -109,6 +109,9 @@
     "direccion": "Dirección: ",
     "correo":"Correo Electrónico: ",
     "datos":"Sus datos de contacto son: ",
-    "pedido": "! Su pedido se está preparando"
+    "pedido": "! Su pedido se está preparando",
+    "finalizar": "Finalizar Compra",
+    "accion": "Acción",
+    "eliminar": "Eliminar"
   }
 }

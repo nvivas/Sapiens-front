@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, forkJoin, map } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Juego } from '../models/juego.model';
-import { PurchaseService } from './purchase.service';
 
 @Injectable({
   providedIn: 'root'
