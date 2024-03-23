@@ -49,6 +49,15 @@ export class ResumenCompraComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.checkoutForm = this.formBuilder.group({
+      nombre: ['', Validators.required],
+      apellidos: ['', Validators.required],
+      direccion: ['', Validators.required],
+      codigoPostal: ['', [Validators.required, Validators.pattern(/^\d{5}$/)]],
+      email: ['', [Validators.required, Validators.email]], // Agregamos Validators.email para validar el formato del correo electrónico
+      telefono: ['', Validators.required]
+    });
+
     this.items = this.purchaseService.getItems();
     this.purchaseService.getDataFromDatabase();
     this.obtenerJuegosAgregados();
