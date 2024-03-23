@@ -27,6 +27,7 @@
   <div class="botones">
     <button class="boton" (click)="borrarCarrito()">{{ "resumen.borrar-carrito" | translate }}</button>
     <button class="boton" (click)="comprar()">{{ "resumen.comprar-ahora" | translate }}</button>
+    <div class="error" *ngIf="isVacio">La cesta está vacía</div>
   </div>
 </div>
 

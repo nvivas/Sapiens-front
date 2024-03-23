@@ -21,6 +21,7 @@ export class ResumenCompraComponent implements OnInit {
   mensaje: boolean = false;
 
   private clearCartSubscription: Subscription = new Subscription();
+  isVacio: boolean = false;
 
   constructor(
     private purchaseService: PurchaseService,
@@ -103,7 +104,17 @@ export class ResumenCompraComponent implements OnInit {
   }
 
   comprar() {
-    this.comprarAhora = true;
+    if(this.total === 0) {
+      this.isVacio = true;
+      this.comprarAhora = false;
+    } else {
+      this.isVacio = false;
+      this.comprarAhora = true;
+    }
+
+
+
+    this.total === 0 ? this.isVacio = true : this.comprarAhora = true;
   }
 
   onDeleteItem(index: number) {

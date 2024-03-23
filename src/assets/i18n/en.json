@@ -106,7 +106,7 @@
     "apellidos": "Surname",
     "cp": "Postal Code",
     "telefono": "Telephone number",
-    "direccion": "Address",
+    "direccion": "Address: (00000) ",
     "correo":"E-mail",
     "datos":"Your contact information is: ",
     "pedido": "! Your order is being prepared",
