@@ -84,7 +84,8 @@
     "comprar": "Add to cart",
     "agotado": "Out of Stock",
     "categoria": "Category: ",
-    "precio": "Price: "
+    "precio": "Price: ",
+    "stock": "Stock Available: "
   },
 
   "rol": {
