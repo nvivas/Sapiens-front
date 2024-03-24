@@ -48,8 +48,14 @@
     <label>{{ "resumen.correo" | translate }}</label>
     <input type="email" formControlName="email" class="form-control" required placeholder="Introduce su email">
 
-    <label>{{ "resumen.telefono" | translate }}</label>
-    <input type="tel" formControlName="telefono" class="form-control" required placeholder="Introduce su teléfono">
+    <label>{{ "resumen.tarjeta.numero" | translate }}</label>
+    <input type="text" formControlName="numero" class="form-control" required placeholder="Introduce su número de tarjeta">
+
+    <label>{{ "resumen.tarjeta.caducidad" | translate }}</label>
+    <input type="text" formControlName="caducidad" class="form-control" required placeholder="Introduce su caducidad">
+
+    <label>{{ "resumen.tarjeta.cvv" | translate }}</label>
+    <input type="text" formControlName="cvv" class="form-control" required placeholder="Introduce su CVV">
 
     <button type="submit" (click)="checkout()" class="btn btn-primary" [disabled]="checkoutForm.invalid">
       {{ "resumen.finalizar" | translate }}
@@ -69,7 +75,6 @@
     <p>{{ "resumen.direccion" | translate }} {{ checkoutForm.value.direccion }}</p>
     <p>{{ "resumen.cp" | translate }} {{ checkoutForm.value.codigoPostal }}</p>
     <p>{{ "resumen.correo" | translate }} {{ checkoutForm.value.email }}</p>
-    <p>{{ "resumen.telefono" | translate }} {{ checkoutForm.value.telefono }}</p>
   </div>
 </div>
 

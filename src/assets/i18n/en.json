@@ -67,7 +67,17 @@
     "telefono": "Phone Number",
     "mensaje": "Message",
     "enviar": "Send",
-    "mensajeEnviado": "Email sent!"
+    "mensajeEnviado": "Email sent!",
+    "introduce": {
+      "nombre": "* Enter your name",
+      "email": "* Enter your email",
+      "mensaje": "* Enter your message"
+    },
+    "placeholder": {
+      "nombre": "Enter your name",
+      "email": "Enter your email",
+      "mensaje": "Enter your message"
+    }
   },
 
   "detalle": {
@@ -112,6 +122,11 @@
     "pedido": "! Your order is being prepared",
     "finalizar": "Complete purchase",
     "accion": "Action",
-    "eliminar": "Delete"
+    "eliminar": "Delete",
+    "tarjeta": {
+      "numero": "Card Number",
+      "caducidad": "Expiration date",
+      "cvv": "Card Verification Value (CVV)"
+    }
   }
 }

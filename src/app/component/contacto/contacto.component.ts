@@ -17,7 +17,6 @@ export class ContactoComponent {
   isEmail: boolean = false;
   isMensaje: boolean = false;
 
-
   constructor(private fb: FormBuilder) {
     // No me han funcionado las validaciones con Validators. Creado método para validar más abajo
     this.contacto = this.fb.group({
@@ -27,8 +26,7 @@ export class ContactoComponent {
     });
   }
 
-  onSubmit() {
-  }
+  onSubmit() {}
 
   enviarCorreo() {
     this.validacion();
@@ -38,18 +36,18 @@ export class ContactoComponent {
     // Expresión regular para validar un correo electrónico
     let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
-}
+  }
 
   validacion() {
     const nombre = this.contacto.get('nombre')?.value;
     const email = this.contacto.get('email')?.value;
     const mensaje = this.contacto.get('mensaje')?.value;
 
-    nombre == '' ? this.isNombre = true : this.isNombre = false
-    email == '' || !this.validarEmail(email) ? this.isEmail = true : this.isEmail = false
-    mensaje == '' ? this.isMensaje = true : this.isMensaje = false
+    nombre == '' ? (this.isNombre = true) : (this.isNombre = false);
+    email == '' || !this.validarEmail(email) ? (this.isEmail = true) : (this.isEmail = false);
+    mensaje == '' ? (this.isMensaje = true) : (this.isMensaje = false);
 
-    if(nombre != '' && (email != '' && this.validarEmail(email))  && mensaje != '') {
+    if (nombre != '' && email != '' && this.validarEmail(email) && mensaje != '') {
       setTimeout(() => {
         this.correoEnviado = true;
         this.mensajeExito = '';
