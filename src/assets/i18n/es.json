@@ -85,7 +85,8 @@
     "comprar": "Añadir a la cesta",
     "agotado": "Agotado",
     "categoria": "Categoria: ",
-    "precio": "Precio: "
+    "precio": "Precio: ",
+    "stock": "Stock disponible: "
   },
 
   "rol": {
