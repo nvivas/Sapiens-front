@@ -22,6 +22,8 @@ export class ResumenCompraComponent implements OnInit {
 
   private clearCartSubscription: Subscription = new Subscription();
   isVacio: boolean = false;
+  juegoId: number = 0;
+  cantidad: number = 1;
 
   constructor(
     private purchaseService: PurchaseService,
@@ -29,21 +31,38 @@ export class ResumenCompraComponent implements OnInit {
     private formBuilder: FormBuilder
   ) {
     this.checkoutForm = this.formBuilder.group({
-      nombre: ['', Validators.required],
-      apellidos: ['', Validators.required],
-      direccion: ['', Validators.required],
-      codigoPostal: ['', [Validators.required, Validators.pattern(/^\d{5}$/)]],
-      email: ['', [Validators.required, Validators.email]],
+      nombre: ['Nacho', Validators.required],
+      apellidos: ['Vivas', Validators.required],
+      direccion: ['Plaza', Validators.required],
+      codigoPostal: [
+        '12345',
+        [Validators.required, Validators.pattern(/^\d{5}$/)],
+      ],
+      email: ['nacho@nacho.es', [Validators.required, Validators.email]],
       numero: ['1234-1231-12-1234567890'],
       caducidad: ['12/34'],
-      cvv: ['123']
+      cvv: ['123'],
     });
   }
 
-  checkout() {
+  checkout(juegoId: number, cantidad: number) {
     setTimeout(() => {
       this.mensaje = true;
     }, 1000);
+
+    for (let i = 0; i < this.juegos.length; i++) {
+      this.juegoId = this.juegos[i].id;
+      this.juegoService.actualizarStock(this.juegoId, cantidad).subscribe(
+        (response) => {
+          console.log(response);
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
+
+    }
+
     this.purchaseService.clearCart();
   }
 
@@ -97,7 +116,7 @@ export class ResumenCompraComponent implements OnInit {
   }
 
   comprar() {
-    if(this.total === 0) {
+    if (this.total === 0) {
       this.isVacio = true;
       this.comprarAhora = false;
     } else {
@@ -105,7 +124,7 @@ export class ResumenCompraComponent implements OnInit {
       this.comprarAhora = true;
     }
 
-    this.total === 0 ? this.isVacio = true : this.comprarAhora = true;
+    this.total === 0 ? (this.isVacio = true) : (this.comprarAhora = true);
   }
 
   onDeleteItem(index: number) {
