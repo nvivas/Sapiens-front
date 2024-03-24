@@ -31,21 +31,20 @@ export class ResumenCompraComponent implements OnInit {
     private formBuilder: FormBuilder
   ) {
     this.checkoutForm = this.formBuilder.group({
-      nombre: ['Nacho', Validators.required],
-      apellidos: ['Vivas', Validators.required],
-      direccion: ['Plaza', Validators.required],
-      codigoPostal: [
-        '12345',
-        [Validators.required, Validators.pattern(/^\d{5}$/)],
-      ],
-      email: ['nacho@nacho.es', [Validators.required, Validators.email]],
+      nombre: ['', Validators.required],
+      apellidos: ['', Validators.required],
+      direccion: ['', Validators.required],
+      localidad: ['', Validators.required],
+      provincia: ['', Validators.required],
+      codigoPostal: ['', [Validators.required, Validators.pattern(/^\d{5}$/)]],
+      email: ['', [Validators.required, Validators.email]],
       numero: ['1234-1231-12-1234567890'],
       caducidad: ['12/34'],
       cvv: ['123'],
     });
   }
 
-  checkout(juegoId: number, cantidad: number) {
+  checkout(cantidad: number) {
     setTimeout(() => {
       this.mensaje = true;
     }, 1000);

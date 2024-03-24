@@ -37,7 +37,10 @@
     "buscar": "Buscar",
     "precio": "Precio",
     "mostrar": "Mostrar todos",
-    "no-encontrado": "Juego no encontrado"
+    "no-encontrado": "Juego no encontrado",
+    "placeholder": {
+      "buscar": "Buscar por nombre..."
+    }
   },
 
   "inicio": {
@@ -86,7 +89,10 @@
     "agotado": "Agotado",
     "categoria": "Categoria: ",
     "precio": "Precio: ",
-    "stock": "Stock disponible: "
+    "stock": "Stock disponible: ",
+    "euro": "€",
+    "stock-disponible": "+5",
+    "alerta": "Se ha añadido el juego a la cesta"
   },
 
   "rol": {
@@ -111,6 +117,8 @@
     "compra": "Resumen Compra",
     "nombre": "Nombre:",
     "precio": "Precio",
+    "sin": "sin IVA",
+    "con": "con IVA",
     "total": "Total:",
     "borrar-carrito": "Borrar la cesta",
     "comprar-ahora": "Comprar Ahora",
@@ -119,6 +127,8 @@
     "cp": "Código postal: (00000)",
     "telefono": "Número de Teléfono: ",
     "direccion": "Dirección: ",
+    "provincia": "Provincia:",
+    "localidad": "Localidad:",
     "correo":"Correo Electrónico: ",
     "datos":"Sus datos de contacto son: ",
     "pedido": "! Su pedido se está preparando",
@@ -127,9 +137,22 @@
     "eliminar": "Eliminar",
     "vacia": "La cesta está vacía",
     "tarjeta": {
-      "numero": "Nº de la tarjeta",
-      "caducidad": "Caducidad",
-      "cvv": "Código de Verificación de la Tarjeta (CVV)"
+      "numero": "Nº de la tarjeta:",
+      "caducidad": "Caducidad:",
+      "cvv": "Código de Verificación de la Tarjeta (CVV):"
+    },
+    "articulos": "No hay artículos en la cesta",
+    "placeholder": {
+      "nombre": "Introduce tu nombre",
+      "apellidos": "Introduce tus apellidos",
+      "direccion": "Introduce tu dirección",
+      "provincia": "Introduce tu provincia",
+      "localidad": "Introduce tu localidad",
+      "cp": "Introduce tu CP (00000)",
+      "email":"Introduce su email",
+      "ntarjeta": "Introduce su número de tarjeta",
+      "caducidad": "Introduce su caducidad",
+      "cvv": "Introduce su CVV"
     }
   }
 }

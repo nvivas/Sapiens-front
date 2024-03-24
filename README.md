@@ -21,7 +21,7 @@ Con el comando nvm, se debe instalar la siguiente versión:
 - `nvm use 14.15.0`
 
 ## Node Modules
-Se debe instalar node_modules en el proyecto. Para ello, se debe lanzar el siguiente comando en la terminal:
+Se debe instalar node_modules en el proyecto. Para ello, se tiene que lanzar el siguiente comando en la terminal:
 - `npm install` o `npm i` 
 
 ## Comentar línea

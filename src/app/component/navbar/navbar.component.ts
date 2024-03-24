@@ -29,7 +29,6 @@ export class NavbarComponent implements OnInit {
         this.itemCount = count;
       });
 
-    // Suscribirse al evento de borrado del carrito
     this.purchaseService.getClearCartObservable().subscribe(() => {
       this.itemCount = 0; // Reiniciar el contador
     });

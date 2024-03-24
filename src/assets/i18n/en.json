@@ -37,7 +37,10 @@
     "buscar": "Search",
     "precio": "Price",
     "mostrar": "Show all",
-    "no-encontrado": "Game not found"
+    "no-encontrado": "Game not found",
+    "placeholder": {
+      "buscar": "Search by name..."
+    }
   },
 
   "inicio": {
@@ -73,6 +76,7 @@
       "email": "* Enter your email",
       "mensaje": "* Enter your message"
     },
+
     "placeholder": {
       "nombre": "Enter your name",
       "email": "Enter your email",
@@ -85,7 +89,10 @@
     "agotado": "Out of Stock",
     "categoria": "Category: ",
     "precio": "Price: ",
-    "stock": "Stock Available: "
+    "stock": "Stock Available: ",
+    "euro": "€",
+    "stock-disponible": "+5",
+    "alerta": "The game has been added to the cart"
   },
 
   "rol": {
@@ -110,6 +117,8 @@
     "compra": "Purchase Summary",
     "nombre": "Name",
     "precio": "Price",
+    "sin": "excluding VAT",
+    "con": "including VAT",
     "total": "Total:",
     "borrar-carrito": "Clear Cart",
     "comprar-ahora": "Buy Now",
@@ -118,6 +127,8 @@
     "cp": "Postal Code",
     "telefono": "Telephone number",
     "direccion": "Address: (00000) ",
+    "provincia": "Province:",
+    "localidad": "Town:",
     "correo":"E-mail",
     "datos":"Your contact information is: ",
     "pedido": "! Your order is being prepared",
@@ -129,6 +140,19 @@
       "numero": "Card Number",
       "caducidad": "Expiration date",
       "cvv": "Card Verification Value (CVV)"
+    },
+    "articulos": "There are no items in the basket",
+    "placeholder": {
+      "nombre": "Enter your name",
+      "apellidos": "Enter your last name",
+      "direccion": "Enter your address",
+      "provincia": "Enter your province",
+      "localidad": "Enter your town",
+      "cp": "Enter your ZIP code (00000)",
+      "email": "Enter your email",
+      "ntarjeta": "Enter your card number",
+      "caducidad": "Enter your expiration date",
+      "cvv": "Enter your CVV"
     }
   }
 }

@@ -96,7 +96,7 @@ button[type="submit"]:disabled {
 }
 
 .confirmacion-mensaje {
-  margin-top: 100px;
+  margin-top: 40px;
   padding: 20px;
   border-radius: 5px;
   font-size: 1.2rem;
@@ -139,6 +139,16 @@ button[type="submit"]:disabled {
   border-color: #3c763d;
 }
 
+.checkout-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  max-width: 800px;
+  margin: 20px;
+  justify-items: end;
+  align-items: center;
+}
+
 .comprar-ahora {
   display: flex;
   justify-content: center;
@@ -146,6 +156,7 @@ button[type="submit"]:disabled {
 
 .imagen {
   width: 500px;
+  margin-bottom: 32px;
 }
 
 .imagen-contenedor {
@@ -180,6 +191,7 @@ button[type="submit"]:disabled {
 
 .columna {
   height: 80px;
+  text-align: center;
 }
 
 .cabecera {
@@ -195,4 +207,10 @@ button[type="submit"]:disabled {
   font-size: 40px;
   font-weight: 700;
   margin-top: 30px;
+}
+
+.sin-juegos {
+  text-align: center;
+  height: 80px;
+  font-size: 32px;
 }

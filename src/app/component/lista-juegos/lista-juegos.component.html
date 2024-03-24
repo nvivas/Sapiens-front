@@ -1,6 +1,6 @@
 <div class="col-lg-2">
   <div class="contenedor-filtro">
-    <input #filtroInput type="text" class="filtro-input" (input)="onInputChange($event)" placeholder="Buscar por nombre..."/>
+    <input #filtroInput type="text" class="filtro-input" (input)="onInputChange($event)" placeholder="{{ 'lista.placeholder.buscar' | translate }}"/>
     <button (click)="filtro()" class="filtro-button">{{ "lista.buscar" | translate }}</button>
     <button (click)="mostrarTodos(filtroInput)" class="filtro-button">{{ "lista.mostrar" | translate }} </button>
   </div>
@@ -13,7 +13,7 @@
       <h3>{{ juego.nombre }}</h3>
       <img [src]="getImagePath(juego.imagen_ruta)" alt="{{ juego.imagen_ruta }}" class="imagenJuego" />
       <p class="precio">{{"lista.precio" | translate}}: {{ juego.precio }}</p>
-      <p *ngIf="juego.stock > 0" class="disponible stock">{{ "lista.disponible" | translate }} </p>
+      <p *ngIf="juego.stock > 0" class="disponible stock">{{ "lista.disponible" | translate }}</p>
       <p *ngIf="juego.stock == 0" class="no_disponible stock">{{ "lista.agotado" | translate }}</p>
     </a>
   </div>

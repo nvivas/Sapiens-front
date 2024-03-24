@@ -48,7 +48,8 @@ export class DetalleJuegosComponent implements OnInit {
   addToCart(item: any) {
     console.log('Juegos: ' + this.juego.nombre);
     this.purchaseService.addToCart(item);
-    alert('Se ha añadido el juego a la cesta');
+    const alertMessage = this.translateService.instant('detalle.alerta');
+    alert(alertMessage);
   }
 
   verificarIdiomaActual(): boolean {

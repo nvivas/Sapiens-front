@@ -5,21 +5,27 @@
       <thead>
         <tr class="cabecera">
           <th>{{ "resumen.nombre" | translate }}</th>
-          <th>{{ "resumen.precio" | translate }}</th>
+          <th>{{ "resumen.precio" | translate }} {{ "resumen.sin" | translate }}</th>
+          <th>{{ "resumen.precio" | translate }} {{ "resumen.con" | translate }}</th>
           <th>{{ "resumen.accion" | translate }}</th>
         </tr>
       </thead>
-      <tbody *ngFor="let juego of juegos; let i = index">
-        <tr class="columna">
+      <tbody>
+        <tr class="columna" *ngFor="let juego of juegos; let i = index">
           <td>{{ juego.nombre }}</td>
+          <td>{{ (juego.precio / 1.21).toFixed(2) }}</td>
           <td>{{ juego.precio }}</td>
           <button class="eliminar" (click)="onDeleteItem(i)">{{ "resumen.eliminar" | translate }}</button>
         </tr>
       </tbody>
       <tfoot>
-        <tr class="columna">
+        <tr class="columna" *ngIf="juegos.length > 0">
           <td>{{ "resumen.total" | translate }}</td>
-          <td>{{ total }}</td>
+          <td></td>
+          <td>{{ total }} </td>
+        </tr>
+        <tr>
+          <td colspan="4" class="sin-juegos" *ngIf="juegos.length === 0">{{ "resumen.articulos" | translate }}</td>
         </tr>
       </tfoot>
     </table>
@@ -34,30 +40,36 @@
 <div class="comprar-ahora" *ngIf="comprarAhora && !mensaje">
   <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="checkout-form">
     <label>{{ "resumen.nombre" | translate }}</label>
-    <input type="text" formControlName="nombre" class="form-control" required placeholder="Introduce su nombre">
+    <input type="text" formControlName="nombre" class="form-control" required placeholder="{{ 'resumen.placeholder.nombre' | translate }}">
 
     <label>{{ "resumen.apellidos" | translate }}</label>
-    <input type="text" formControlName="apellidos" class="form-control" required placeholder="Introduce sus apellidos">
+    <input type="text" formControlName="apellidos" class="form-control" required placeholder="{{ 'resumen.placeholder.apellidos' | translate }}">
 
     <label>{{ "resumen.direccion" | translate }}</label>
-    <input type="text" formControlName="direccion" class="form-control" required placeholder="Introduce su dirección">
+    <input type="text" formControlName="direccion" class="form-control" required placeholder="{{ 'resumen.placeholder.direccion' | translate }}">
+
+    <label>{{ "resumen.provincia" | translate }}</label>
+    <input type="text" formControlName="provincia" class="form-control" required placeholder="{{ 'resumen.placeholder.provincia' | translate }}">
+
+    <label>{{ "resumen.localidad" | translate }}</label>
+    <input type="text" formControlName="localidad" class="form-control" required placeholder="{{ 'resumen.placeholder.localidad' | translate }}">
 
     <label>{{ "resumen.cp" | translate }}</label>
-    <input type="text" formControlName="codigoPostal" class="form-control" required placeholder="Introduce su CP (00000)">
+    <input type="text" formControlName="codigoPostal" class="form-control" required placeholder="{{ 'resumen.placeholder.cp' | translate }}">
 
     <label>{{ "resumen.correo" | translate }}</label>
-    <input type="email" formControlName="email" class="form-control" required placeholder="Introduce su email">
+    <input type="email" formControlName="email" class="form-control" required placeholder="{{ 'resumen.placeholder.email' | translate }}">
 
     <label>{{ "resumen.tarjeta.numero" | translate }}</label>
-    <input type="text" formControlName="numero" class="form-control" required placeholder="Introduce su número de tarjeta">
+    <input type="text" formControlName="numero" class="form-control" required placeholder="{{ 'resumen.placeholder.ntarjeta' | translate }}">
 
     <label>{{ "resumen.tarjeta.caducidad" | translate }}</label>
-    <input type="text" formControlName="caducidad" class="form-control" required placeholder="Introduce su caducidad">
+    <input type="text" formControlName="caducidad" class="form-control" required placeholder="{{ 'resumen.placeholder.caducidad' | translate }}">
 
     <label>{{ "resumen.tarjeta.cvv" | translate }}</label>
-    <input type="text" formControlName="cvv" class="form-control" required placeholder="Introduce su CVV">
+    <input type="text" formControlName="cvv" class="form-control" required placeholder="{{ 'resumen.placeholder.cvv' | translate }}">
 
-    <button type="submit" (click)="checkout(juegoId, cantidad)" class="btn btn-primary" [disabled]="checkoutForm.invalid">
+    <button type="submit" (click)="checkout(cantidad)" class="btn btn-primary" [disabled]="checkoutForm.invalid">
       {{ "resumen.finalizar" | translate }}
     </button>
   </form>
@@ -65,10 +77,10 @@
 
 <div class="confirmacion-mensaje" *ngIf="mensaje">
   <div class="imagen-contenedor">
-    <img class="imagen" src="../../../assets/img/gracias_por_su_compra.png" alt="Gracias por su compra">
+    <img class="imagen" src="../../../assets/img/gracias_por_su_compra.png" alt="{{ 'resumen.gracias' | translate }}">
   </div>
   <div class="confirmacion-texto">
-    <p>{{ "resumen.gracias" | translate }} {{ checkoutForm.value.nombre }}{{ "resumen.pedido" | translate }}</p>
+    <p>{{ "resumen.gracias" | translate }} {{ checkoutForm.value.nombre }} {{ "resumen.pedido" | translate }}</p>
     <p>{{ "resumen.datos" | translate }}</p>
     <p>{{ "resumen.nombre" | translate }} {{ checkoutForm.value.nombre }}</p>
     <p>{{ "resumen.apellidos"| translate }} {{ checkoutForm.value.apellidos }}</p>
