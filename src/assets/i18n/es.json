@@ -67,7 +67,18 @@
     "telefono": "Número de Teléfono",
     "mensaje": "Mensaje",
     "enviar": "Enviar",
-    "mensajeEnviado": "¡Correo electrónico enviado!"
+    "mensajeEnviado": "¡Correo electrónico enviado!",
+    "introduce": {
+      "nombre": "* Introduce el nombre",
+      "email": "* Introduce el correo electrónico",
+      "mensaje": "* Introduce el mensaje"
+    },
+
+    "placeholder": {
+      "nombre": "Introduce su nombre",
+      "email": "Introduce su correo",
+      "mensaje": "Introduce su mensaje"
+    }
   },
 
   "detalle": {
@@ -104,7 +115,7 @@
     "comprar-ahora": "Comprar Ahora",
     "gracias": "¡Gracias por su compra, ",
     "apellidos": "Apellidos: ",
-    "cp": "Código postal: ",
+    "cp": "Código postal: (00000)",
     "telefono": "Número de Teléfono: ",
     "direccion": "Dirección: ",
     "correo":"Correo Electrónico: ",
@@ -112,6 +123,11 @@
     "pedido": "! Su pedido se está preparando",
     "finalizar": "Finalizar Compra",
     "accion": "Acción",
-    "eliminar": "Eliminar"
+    "eliminar": "Eliminar",
+    "tarjeta": {
+      "numero": "Nº de la tarjeta",
+      "caducidad": "Caducidad",
+      "cvv": "Código de Verificación de la Tarjeta (CVV)"
+    }
   }
 }

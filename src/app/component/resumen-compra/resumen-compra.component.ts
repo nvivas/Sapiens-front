@@ -15,12 +15,13 @@ export class ResumenCompraComponent implements OnInit {
   items: Juego[] = [];
   juegos: Juego[] = [];
   itemCount: number = 0;
-  total: number | undefined;
+  total: number = 0;
   comprarAhora: boolean = false;
   checkoutForm: FormGroup;
   mensaje: boolean = false;
 
   private clearCartSubscription: Subscription = new Subscription();
+  isVacio: boolean = false;
 
   constructor(
     private purchaseService: PurchaseService,
@@ -31,9 +32,11 @@ export class ResumenCompraComponent implements OnInit {
       nombre: ['', Validators.required],
       apellidos: ['', Validators.required],
       direccion: ['', Validators.required],
-      codigoPostal: ['', Validators.required, Validators.min(5),  Validators.max(5)],
+      codigoPostal: ['', [Validators.required, Validators.pattern(/^\d{5}$/)]],
       email: ['', [Validators.required, Validators.email]],
-      telefono: ['', [Validators.required, Validators.min(9),  Validators.max(9)]]
+      numero: ['1234-1231-12-1234567890'],
+      caducidad: ['12/34'],
+      cvv: ['123']
     });
   }
 
@@ -94,7 +97,15 @@ export class ResumenCompraComponent implements OnInit {
   }
 
   comprar() {
-    this.comprarAhora = true;
+    if(this.total === 0) {
+      this.isVacio = true;
+      this.comprarAhora = false;
+    } else {
+      this.isVacio = false;
+      this.comprarAhora = true;
+    }
+
+    this.total === 0 ? this.isVacio = true : this.comprarAhora = true;
   }
 
   onDeleteItem(index: number) {

@@ -1,16 +1,16 @@
 <div *ngIf="!correoEnviado">
   <form [formGroup]="contacto" (ngSubmit)="onSubmit()" class="contact-form">
     <label for="nombre" class="form-label">{{ "contacto.nombre" | translate }}</label>
-    <input id="nombre" formControlName="nombre" required class="form-input">
+    <input id="nombre" formControlName="nombre" required class="form-input" placeholder="{{ 'contacto.placeholder.nombre' | translate }}">
+    <div class="comprobar" *ngIf="isNombre">{{ "contacto.introduce.nombre" | translate }}</div>
 
     <label for="email" class="form-label">{{ "contacto.correo" | translate }}</label>
-    <input id="email" type="email" formControlName="email" required class="form-input">
-
-    <label for="telefono" class="form-label">{{ "contacto.telefono" | translate }}</label>
-    <input id="telefono" type="tel" formControlName="telefono" class="form-input">
+    <input id="email" type="email" formControlName="email" required class="form-input" placeholder="{{ 'contacto.placeholder.email' | translate }}">
+    <div class="comprobar" *ngIf="isEmail">{{ "contacto.introduce.email" | translate }}</div>
 
     <label for="mensaje" class="form-label">{{ "contacto.mensaje" | translate }}</label>
-    <textarea id="mensaje" formControlName="mensaje" class="form-textarea"></textarea>
+    <textarea id="mensaje" formControlName="mensaje" class="form-textarea" placeholder="{{ 'contacto.placeholder.mensaje' | translate }}"></textarea>
+    <div class="comprobar" *ngIf="isMensaje">{{ "contacto.introduce.mensaje" | translate }}</div>
 
     <button type="submit" (click)="enviarCorreo()" class="form-button">{{ "contacto.enviar" | translate }}</button>
   </form>

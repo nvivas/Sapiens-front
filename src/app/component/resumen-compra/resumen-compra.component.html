@@ -27,28 +27,35 @@
   <div class="botones">
     <button class="boton" (click)="borrarCarrito()">{{ "resumen.borrar-carrito" | translate }}</button>
     <button class="boton" (click)="comprar()">{{ "resumen.comprar-ahora" | translate }}</button>
+    <div class="error" *ngIf="isVacio">La cesta está vacía</div>
   </div>
 </div>
 
 <div class="comprar-ahora" *ngIf="comprarAhora && !mensaje">
   <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="checkout-form">
     <label>{{ "resumen.nombre" | translate }}</label>
-    <input type="text" formControlName="nombre" class="form-control" required>
+    <input type="text" formControlName="nombre" class="form-control" required placeholder="Introduce su nombre">
 
     <label>{{ "resumen.apellidos" | translate }}</label>
-    <input type="text" formControlName="apellidos" class="form-control" required>
+    <input type="text" formControlName="apellidos" class="form-control" required placeholder="Introduce sus apellidos">
 
     <label>{{ "resumen.direccion" | translate }}</label>
-    <input type="text" formControlName="direccion" class="form-control" required>
+    <input type="text" formControlName="direccion" class="form-control" required placeholder="Introduce su dirección">
 
     <label>{{ "resumen.cp" | translate }}</label>
-    <input type="text" formControlName="codigoPostal" class="form-control" required>
+    <input type="text" formControlName="codigoPostal" class="form-control" required placeholder="Introduce su CP (00000)">
 
     <label>{{ "resumen.correo" | translate }}</label>
-    <input type="email" formControlName="email" class="form-control" required>
+    <input type="email" formControlName="email" class="form-control" required placeholder="Introduce su email">
 
-    <label>{{ "resumen.telefono" | translate }}</label>
-    <input type="tel" formControlName="telefono" class="form-control" required>
+    <label>{{ "resumen.tarjeta.numero" | translate }}</label>
+    <input type="text" formControlName="numero" class="form-control" required placeholder="Introduce su número de tarjeta">
+
+    <label>{{ "resumen.tarjeta.caducidad" | translate }}</label>
+    <input type="text" formControlName="caducidad" class="form-control" required placeholder="Introduce su caducidad">
+
+    <label>{{ "resumen.tarjeta.cvv" | translate }}</label>
+    <input type="text" formControlName="cvv" class="form-control" required placeholder="Introduce su CVV">
 
     <button type="submit" (click)="checkout()" class="btn btn-primary" [disabled]="checkoutForm.invalid">
       {{ "resumen.finalizar" | translate }}
@@ -68,7 +75,6 @@
     <p>{{ "resumen.direccion" | translate }} {{ checkoutForm.value.direccion }}</p>
     <p>{{ "resumen.cp" | translate }} {{ checkoutForm.value.codigoPostal }}</p>
     <p>{{ "resumen.correo" | translate }} {{ checkoutForm.value.email }}</p>
-    <p>{{ "resumen.telefono" | translate }} {{ checkoutForm.value.telefono }}</p>
   </div>
 </div>
 
