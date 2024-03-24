@@ -69,4 +69,9 @@ export class JuegoService {
       console.log("Juegos Filtrados: " + juegosFiltrados);
       console.log("juegosSubject.next: " + this.juegosSubject.next(juegosFiltrados));
   }
+
+  actualizarStock(juegoId: number, cantidad: number) {
+    console.log(`${this.apiUrl}/actualizar-stock`);
+    return this.http.post(`${this.apiUrl}/actualizar-stock/${juegoId}`, { juego_id: juegoId, cantidad_comprada: cantidad });
+  }
 }

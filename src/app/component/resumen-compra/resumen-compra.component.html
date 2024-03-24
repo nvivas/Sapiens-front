@@ -57,7 +57,7 @@
     <label>{{ "resumen.tarjeta.cvv" | translate }}</label>
     <input type="text" formControlName="cvv" class="form-control" required placeholder="Introduce su CVV">
 
-    <button type="submit" (click)="checkout()" class="btn btn-primary" [disabled]="checkoutForm.invalid">
+    <button type="submit" (click)="checkout(juegoId, cantidad)" class="btn btn-primary" [disabled]="checkoutForm.invalid">
       {{ "resumen.finalizar" | translate }}
     </button>
   </form>
