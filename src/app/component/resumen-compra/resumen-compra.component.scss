@@ -185,5 +185,14 @@ button[type="submit"]:disabled {
 .cabecera {
   height: 50px;
   color: #cfd8dc;
-  background: #343a40
+  background: #343a40;
+}
+
+.cesta-vacia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 30px;
 }

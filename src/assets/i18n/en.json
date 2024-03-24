@@ -123,6 +123,7 @@
     "finalizar": "Complete purchase",
     "accion": "Action",
     "eliminar": "Delete",
+    "vacia": "The basket is empty",
     "tarjeta": {
       "numero": "Card Number",
       "caducidad": "Expiration date",

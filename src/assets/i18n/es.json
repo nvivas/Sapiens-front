@@ -124,6 +124,7 @@
     "finalizar": "Finalizar Compra",
     "accion": "Acción",
     "eliminar": "Eliminar",
+    "vacia": "La cesta está vacía",
     "tarjeta": {
       "numero": "Nº de la tarjeta",
       "caducidad": "Caducidad",
