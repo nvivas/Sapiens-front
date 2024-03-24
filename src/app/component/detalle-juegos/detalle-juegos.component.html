@@ -9,7 +9,7 @@
         <p class="juego-detalle">{{"detalle.precio" | translate}} {{ juego.precio }} {{"detalle.euro" | translate}}</p>
         <p class="juego-detalle">{{"detalle.categoria" | translate}} {{ juego.categoria }}</p>
         <p class="stock-disponible" *ngIf="juego.stock > 5">{{"detalle.stock" | translate}} {{"detalle.stock-disponible" | translate}}</p>
-        <p class="stock-poco" *ngIf="juego.stock < 5">{{"detalle.stock" | translate}} {{ juego.stock }}</p>
+        <p class="stock-poco" *ngIf="juego.stock <= 5">{{"detalle.stock" | translate}} {{ juego.stock }}</p>
 
         <button (click)="addToCart(juego.id)" *ngIf="juego.stock > 0">{{ "detalle.comprar" | translate }}</button>
         <label *ngIf="juego.stock == 0">{{ "detalle.agotado" | translate }}</label>
